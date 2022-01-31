@@ -6,15 +6,20 @@
 /*   By: bkozluca <bkozluca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 18:10:09 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/01/31 18:32:13 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/01/31 19:04:14 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void*   memset(void *dest, int c,unsigned n)
+void *ft_memset(void *dest, int c, unsigned n)
 {
-    ptr* = dest;
-    while (n-1 < c)
+    unsigned char *ptr;
+    
+    ptr = dest;
+    
+    while (n-1 > 0)
     {
-        ptr[n] = 
+        *ptr++ = c;
     }
+    
+    return  (dest);
 }
