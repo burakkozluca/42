@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bkozluca <bkozluca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/31 12:19:03 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/01/31 18:30:55 by bkozluca         ###   ########.fr       */
+/*   Created: 2022/01/31 17:54:23 by bkozluca          #+#    #+#             */
+/*   Updated: 2022/01/31 18:30:42 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isdigit(int a)
+char* strncpy(char *dest, const char *src)
 {
-    if(a >= 0 && a <= 9)
-        return 1;
-    return 0;
+    int n;
+
+    n = 0;
+    while(src[n] != '\0')
+    {
+        src[n] = dest[n];
+    }
+    return (*dest);
 }
