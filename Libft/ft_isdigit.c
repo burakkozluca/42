@@ -6,13 +6,13 @@
 /*   By: bkozluca <bkozluca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 12:19:03 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/01/31 18:30:55 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/02/01 11:47:11 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isdigit(int a)
+int	ft_isdigit(int a)
 {
-    if(a >= 0 && a <= 9)
-        return 1;
-    return 0;
+	if (a >= 0 && a <= 9)
+		return (1);
+	return (0);
 }

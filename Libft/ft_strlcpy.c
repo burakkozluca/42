@@ -6,11 +6,11 @@
 /*   By: bkozluca <bkozluca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 17:54:23 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/01/31 18:30:42 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/02/01 17:03:07 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char* strncpy(char *dest, const char *src)
+char	*ft_strlcpy(char *dest, const char *src)
 {
     int n;
 
@@ -21,3 +21,4 @@ char* strncpy(char *dest, const char *src)
     }
     return (*dest);
 }
+//daha olmadı.
