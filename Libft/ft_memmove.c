@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bkozluca <bkozluca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/31 17:15:41 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/02/01 12:36:16 by bkozluca         ###   ########.fr       */
+/*   Created: 2022/02/01 13:14:14 by bkozluca          #+#    #+#             */
+/*   Updated: 2022/02/01 17:02:42 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-#define LIBFT_H
+#include <string.h>
 
-int	isalnum(int a);
-int	ft_isalpha(int a);
-int	ft_isascii(int a);
-int	ft_isdigit(int a);
-int	ft_isprint(int a);
-void	ft_memset(void *dest, int c, unsigned int n);
-int	ft_strlen(char *str);
+void	*ft_memmove(void *dst, const void *src, size_t len)
+{
+	char	*ptr;
+	char	*ptrsrc;
 
-#endif
+	ptr = dst;
+	ptrsrc = src;
+	while (len - 1 > 0)
+	{
+		*ptr++ = *ptrsrc++;
+	}
+	return (dst);
+}

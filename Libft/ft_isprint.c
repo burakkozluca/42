@@ -6,17 +6,13 @@
 /*   By: bkozluca <bkozluca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 12:35:00 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/01/31 13:07:58 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/02/01 11:54:40 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isprint(int a)
+int	ft_isprint(int a)
 {
-    if(a <= "126" && a >= "33")
-        return 1;
-    return 0;
-}
-int main()
-{
-    ft_isprint(20);
+	if (a <= "126" && a >= "33")
+		return (1);
+	return (0);
 }

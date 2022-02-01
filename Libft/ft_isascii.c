@@ -6,11 +6,13 @@
 /*   By: bkozluca <bkozluca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 12:30:25 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/01/31 13:07:54 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/02/01 11:52:59 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isascii(int a)
+int	ft_isascii(int a)
 {
-    
+	if (a >= 0 && a <= 127)
+		return (1);
+	return (0);
 }

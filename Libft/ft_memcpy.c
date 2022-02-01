@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bkozluca <bkozluca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/31 17:15:41 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/02/01 12:36:16 by bkozluca         ###   ########.fr       */
+/*   Created: 2022/02/01 12:55:24 by bkozluca          #+#    #+#             */
+/*   Updated: 2022/02/01 13:34:15 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-#define LIBFT_H
+void	ft_memcpy(void *dest, const void *src, unsigned int n)
+{
+	char	*ptr;
+	char	*ptrsrc;
 
-int	isalnum(int a);
-int	ft_isalpha(int a);
-int	ft_isascii(int a);
-int	ft_isdigit(int a);
-int	ft_isprint(int a);
-void	ft_memset(void *dest, int c, unsigned int n);
-int	ft_strlen(char *str);
-
-#endif
+	ptrsrc = src;
+	ptr = dest;
+	while (n - 1 > 0)
+	{
+		*ptr++ = *ptrsrc++;
+	}
+	return (dest);
+}

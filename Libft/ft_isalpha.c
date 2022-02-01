@@ -6,13 +6,13 @@
 /*   By: bkozluca <bkozluca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 11:26:21 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/01/31 13:08:03 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/02/01 11:47:20 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalpha(int a)
+int	ft_isalpha(int a)
 {
-    if((a >= "A" && a <= "Z") || (a >= "a" && a <= "z"))
-        return 1;
-    return 0;
+	if ((a >= "A" && a <= "Z") || (a >= "a" && a <= "z"))
+		return (1);
+	return (0);
 }
