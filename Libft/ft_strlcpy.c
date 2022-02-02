@@ -6,19 +6,25 @@
 /*   By: bkozluca <bkozluca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 17:54:23 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/02/01 17:03:07 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/02/02 12:04:58 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strlcpy(char *dest, const char *src)
-{
-    int n;
+#include "libft.h"
+#include <string.h>
 
-    n = 0;
-    while(src[n] != '\0')
+char	*ft_strlcpy(char *dest, const char *src,size_t len)
+{
+    const size_t srclen = strlen(src);
+
+    if(srclen + 1 < len) //srclen dest'in uzunluğundan küçükse memcpy ile kopyaladık.
     {
-        src[n] = dest[n];
+        memcpy(dest, src, srclen + 1); // +1 silip deneme yap!
     }
-    return (*dest);
-}
+    else //srclen dest'in uzunluğundan büyükse memcpy ile kopyaladıktan sonra dizinin sonunda boş karakter ekliyoruz
+    {
+        memcpy(dest, src, len - 1);
+        dest[len - 1] = '\0';
+    }
+    return (srclen);
 //daha olmadı.
