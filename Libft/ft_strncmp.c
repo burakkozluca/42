@@ -1,33 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bkozluca <bkozluca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/02 12:08:40 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/02/03 17:23:05 by bkozluca         ###   ########.fr       */
+/*   Created: 2022/02/03 14:02:35 by bkozluca          #+#    #+#             */
+/*   Updated: 2022/02/03 17:23:10 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include "libft.h"
 
-char	*ft_strlcat(char *restrict dst, const char *restrict src, size_t maxlen)
+int	*strncmp(const char *str1, const char *str2, size_t n)
 {
-	const size_t	srclen = strlen(src);
-	const size_t	dstlen = strnlen(dst, maxlen);
+	unsigned char	u1;
+	unsigned char	u2; //register unsigned char
 
-	if (dstlen == maxlen)
-		return (maxlen + srclen);
-	if (srclen < maxlen - dstlen)
+	while (n-- > 0)
 	{
-		memcpy(dst + dstlen, src, srclen + 1);
+		u1 = (unsigned char) *str1++;
+		u2 = (unsigned char) *str2++;
+		if (u1 != u2)
+			return (u1 - u2);
+		if (u1 == '\0')
+			return (0);
 	}
-	else
-	{
-		memcpy(dst + dstlen, src, maxlen - 1);
-		dst[dstlen + maxlen - 1] = "\0";
-	}
-	return (dstlen + srclen);
 }

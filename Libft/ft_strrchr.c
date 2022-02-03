@@ -1,33 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bkozluca <bkozluca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/02 12:08:40 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/02/03 17:23:05 by bkozluca         ###   ########.fr       */
+/*   Created: 2022/02/03 13:04:14 by bkozluca          #+#    #+#             */
+/*   Updated: 2022/02/03 17:23:11 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include "libft.h"
 
-char	*ft_strlcat(char *restrict dst, const char *restrict src, size_t maxlen)
+char	*strrchr(const char *s, int c)
 {
-	const size_t	srclen = strlen(src);
-	const size_t	dstlen = strnlen(dst, maxlen);
-
-	if (dstlen == maxlen)
-		return (maxlen + srclen);
-	if (srclen < maxlen - dstlen)
+	while (*s--)
 	{
-		memcpy(dst + dstlen, src, srclen + 1);
+		if (*s == c)
+			return (char *s);
 	}
-	else
-	{
-		memcpy(dst + dstlen, src, maxlen - 1);
-		dst[dstlen + maxlen - 1] = "\0";
-	}
-	return (dstlen + srclen);
+	return (0);
 }
