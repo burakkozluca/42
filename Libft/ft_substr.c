@@ -1,26 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bkozluca <bkozluca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/31 17:15:41 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/02/07 17:41:02 by bkozluca         ###   ########.fr       */
+/*   Created: 2022/02/07 16:58:13 by bkozluca          #+#    #+#             */
+/*   Updated: 2022/02/07 17:40:57 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-#define LIBFT_H
+#include "libft.h"
+#include <string.h>
 
-int	isalnum(int a);
-int	ft_isalpha(int a);
-int	ft_isascii(int a);
-int	ft_isdigit(int a);
-int	ft_isprint(int a);
-void	ft_memset(void *dest, int c, unsigned int n);
-int	ft_strlen(char *str);
-char	*strchr(const char *s, int c);
-void ft_bzero(void *s, unsigned int n);
+char *ft_substr(char const *s, unsigned int start, size_t len)
+{
 
-#endif
+}

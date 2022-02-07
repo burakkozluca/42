@@ -1,26 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bkozluca <bkozluca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/31 17:15:41 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/02/07 17:41:02 by bkozluca         ###   ########.fr       */
+/*   Created: 2022/02/07 14:39:23 by bkozluca          #+#    #+#             */
+/*   Updated: 2022/02/07 17:40:56 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-#define LIBFT_H
+#include "libft.h"
+#include <string.h>
 
-int	isalnum(int a);
-int	ft_isalpha(int a);
-int	ft_isascii(int a);
-int	ft_isdigit(int a);
-int	ft_isprint(int a);
-void	ft_memset(void *dest, int c, unsigned int n);
-int	ft_strlen(char *str);
-char	*strchr(const char *s, int c);
-void ft_bzero(void *s, unsigned int n);
+void *ft_calloc(size_t count, size_t size)
+{
+	void *buf;
 
-#endif
+	if(!(buf = (void *) malloc(count * size))) //
+		return (NULL);
+	ft_bzero(buf, count * size);
+	return (buf);
+}

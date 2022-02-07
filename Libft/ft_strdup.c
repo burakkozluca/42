@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bkozluca <bkozluca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/31 17:15:41 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/02/07 17:41:02 by bkozluca         ###   ########.fr       */
+/*   Created: 2022/02/07 16:36:30 by bkozluca          #+#    #+#             */
+/*   Updated: 2022/02/07 17:40:59 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-#define LIBFT_H
+char *ft_strdup(char *src)
+{
+	char *result;
+	int	i;
 
-int	isalnum(int a);
-int	ft_isalpha(int a);
-int	ft_isascii(int a);
-int	ft_isdigit(int a);
-int	ft_isprint(int a);
-void	ft_memset(void *dest, int c, unsigned int n);
-int	ft_strlen(char *str);
-char	*strchr(const char *s, int c);
-void ft_bzero(void *s, unsigned int n);
-
-#endif
+	i = -1;
+	result = malloc(sizeof(*src)); //src parametresinin boyutu kadar boyutluk yer aç bellekte
+	if(result == 0)
+		return (0);
+	while(src[++i] != '\0')
+		result[i] = src[i];
+	result[i] = '\0';
+	return(result);
+}

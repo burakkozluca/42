@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bkozluca <bkozluca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/31 17:15:41 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/02/07 17:41:02 by bkozluca         ###   ########.fr       */
+/*   Created: 2022/02/07 10:57:10 by bkozluca          #+#    #+#             */
+/*   Updated: 2022/02/07 17:40:47 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-#define LIBFT_H
+#include "libft.h"
+#include <string.h>
 
-int	isalnum(int a);
-int	ft_isalpha(int a);
-int	ft_isascii(int a);
-int	ft_isdigit(int a);
-int	ft_isprint(int a);
-void	ft_memset(void *dest, int c, unsigned int n);
-int	ft_strlen(char *str);
-char	*strchr(const char *s, int c);
-void ft_bzero(void *s, unsigned int n);
+int *ft_memcmp(const void *s1, const void *s2, size_t n)
+{
+	const void *s1;
+	const void *s2;
 
-#endif
+	register const unsigned char *p1 = s1;
+	register const unsigned char *p2 = s2;
+
+	while(n-- != 0)
+	{
+		if(*p1++ != *p2++)
+			return ((*p1--) - (*p2--));
+	}
+	return (0);
+}
