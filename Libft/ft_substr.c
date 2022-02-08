@@ -6,28 +6,26 @@
 /*   By: bkozluca <bkozluca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 16:58:13 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/02/08 13:13:47 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/02/08 15:36:50 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <string.h>
 
-char *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char *p;
-	int c;
+	char	*p;
+	int	c;
 
 	p = malloc(len + 1);
-
-	if(p == NULL)
+	if (p == NULL)
 		return (0);
-	for(c = 0; c < len; c++)
+	for (c = 0; c < len; c++)
 	{
-		*(p+c) = *(s + start - 1);
+		*(p + c) = *(s + start - 1);
 		s++;
 	}
-
-	*(p+c) = '\0';
-	return(p);
+	*(p + c) = '\0';
+	return (p);
 }
