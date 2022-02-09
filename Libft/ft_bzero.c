@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bkozluca <bkozluca@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 12:29:59 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/02/03 17:22:52 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/02/09 17:47:49 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_bzero(void *s, unsigned int n)
+void	ft_bzero(void *s, unsigned int n)
 {
-	ft_memset(s,0,n);
+	ft_memset(s, 0, n);
 }

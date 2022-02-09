@@ -3,26 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bkozluca <bkozluca@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 12:39:19 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/02/08 13:13:44 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/02/09 17:47:20 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <string.h>
 
-char *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	char *str1;
-	int c, i, k;
+	char	*str1;
+	size_t	c;
+	size_t	i;
+	size_t	k;
 
 	k = 0;
 	c = 0;
-	while(s1[c] == ' ')
+	while (s1[c] == ' ')
 		c++;
 	i = c;
-	while(s1[i] != '\0' || s1[i] != ' ')
+	while (s1[i] != '\0' || s1[i] != ' ')
 	{
 		str1[k] = s1[i];
 	}

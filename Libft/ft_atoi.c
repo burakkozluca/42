@@ -3,21 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bkozluca <bkozluca@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 12:48:41 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/02/07 17:40:54 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/02/09 17:47:12 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
-int ft_atoi( const char *str)
+int	ft_atoi( const char *str)
 {
-	int i;
-	int s;
-	int result;
+	int	i;
+	int	s;
+	int	result;
 
 	i = 0;
 	s = 1;
@@ -26,10 +25,8 @@ int ft_atoi( const char *str)
 		i++;
 	while (str[i] == '+' || str[i] == '-')
 	{
-		if(str[i] == '-')
-		{
-			s*= -1;
-		}
+		if (str[i] == '-')
+			s = -s;
 		i++;
 	}
 	while (str[i] >= '0' && str[i] <= '9')

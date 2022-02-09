@@ -3,19 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bkozluca <bkozluca@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 17:54:23 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/02/03 17:23:07 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/02/09 17:47:10 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
 char	*ft_strlcpy(char *dest, const char *src, size_t len)
 {
-    const   size_t  srclen = strlen(src);
+    const size_t  srclen = strlen(src);
 
     if (srclen + 1 < len) //srclen dest'in uzunluğundan küçükse memcpy ile kopyaladık.
     {

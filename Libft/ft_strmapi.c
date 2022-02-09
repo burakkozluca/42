@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/31 12:30:25 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/02/09 17:47:23 by bkozluca         ###   ########.fr       */
+/*   Created: 2022/02/09 10:33:27 by bkozluca          #+#    #+#             */
+/*   Updated: 2022/02/09 17:47:55 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int a)
+#include "libft.h"
+
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	if (a >= 0 && a <= 127)
-		return (1);
-	return (0);
+	int	i;
+	char	*newstr;
+
+	if (!s || !f)
+		return ((void *)0);
+	while (s[] != '\0')
+	{
+
+	}
 }
