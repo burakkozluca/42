@@ -6,7 +6,7 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 12:39:19 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/02/09 17:47:20 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/02/11 18:20:11 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	k = 0;
 	c = 0;
-	while (s1[c] == ' ')
-		c++;
-	i = c;
+	i = ft_strlen(s1);
 	while (s1[i] != '\0' || s1[i] != ' ')
 	{
 		str1[k] = s1[i];

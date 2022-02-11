@@ -6,9 +6,11 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 12:29:59 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/02/09 17:47:49 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/02/11 18:20:23 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_bzero(void *s, unsigned int n)
 {

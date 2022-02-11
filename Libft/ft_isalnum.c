@@ -6,16 +6,15 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 12:23:46 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/02/09 15:21:41 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/02/11 18:20:19 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(int a)
+#include "libft.h"
+
+int	ft_isalnum(int c)
 {
-	if (((a >= "A" && a <= "Z") || (a >= "a" && a <= "z" ))
-	&& (a >= 0 && a <= 9))
-	{
+	if (ft_isalpha(c) || (c >= 0 && c <= 9))
 		return (1);
-	}
 	return (0);
 }
