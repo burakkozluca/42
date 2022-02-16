@@ -6,7 +6,7 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 13:14:14 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/02/09 17:47:42 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/02/16 13:05:33 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,15 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	char	*ptrsrc;
 
 	ptr = dst;
-	ptrsrc = src;
-	while (len - 1 > 0)
+	ptrsrc = (char *)src;
+	if (dst > src)
 	{
-		*ptr++ = *ptrsrc++;
+		while (len - 1 > 0)
+		{
+			*ptr++ = *ptrsrc++;
+		}
 	}
+	else
+		ft_memcpy(dst, src, len);
 	return (dst);
 }

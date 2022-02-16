@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bkozluca <bkozluca@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 16:58:13 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/02/08 15:36:50 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/02/16 12:08:19 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	p = malloc(len + 1);
 	if (p == NULL)
 		return (0);
-	for (c = 0; c < len; c++)
+	for	(c = 0; c < len; c++)
 	{
 		*(p + c) = *(s + start - 1);
 		s++;

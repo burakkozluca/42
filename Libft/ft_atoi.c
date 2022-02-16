@@ -6,7 +6,7 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 12:48:41 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/02/09 17:47:12 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/02/16 13:05:40 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	ft_atoi( const char *str)
 	while (str[i] == '+' || str[i] == '-')
 	{
 		if (str[i] == '-')
-			s = -s;
+			s *= -1;
 		i++;
 	}
 	while (str[i] >= '0' && str[i] <= '9')
