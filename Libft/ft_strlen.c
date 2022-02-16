@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bkozluca <bkozluca@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 12:54:31 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/02/08 13:13:42 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/02/16 17:48:49 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_strlen(char *str)
 	int	a;
 
 	a = 0;
-	while (str[a] != NULL)
+	while (str[a] != '\0')
 	{
 		a++;
 	}

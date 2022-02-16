@@ -6,7 +6,7 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 17:54:23 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/02/09 17:47:10 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/02/16 17:48:50 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,4 @@ char	*ft_strlcpy(char *dest, const char *src, size_t len)
         ft_memcpy(dest, src, len - 1);
         dest[len - 1] = '\0';
     }
-    return (srclen);
-//daha olmadı.
+    return (dest);

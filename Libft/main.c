@@ -3,54 +3,75 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <ctype.h>
+
+char twice(unsigned int a, char b)
+{
+	return (b + a);
+}
+
+char product(unsigned int a, char b)
+{
+	return (a * b);
+}
+
+char squares(unsigned int a, char b)
+{
+	b = 0;
+	return (a * a);
+}
+
+char alpha(unsigned int a, char b)
+{
+	b = 0;
+	return ('A' + (char)a);
+}
+
+char a_less_than_five(unsigned int a, char b)
+{
+	if (a < 5)
+		return ('A');
+	else
+		return (b);
+}
 
 int main(void)
 {
-	char dest1sys[] = "Aticleworld";
-	const char src1sys[] = "Amlendra";
-	printf("Before memmove >> dest1sys = %s, src1sys = %s\n\n", dest1sys, src1sys);
-	memmove(dest1sys, src1sys, 5);
-	printf("After memmove >> dest1sys = %s, src1sys = %s\n\n", dest1sys, src1sys);
-	printf("---------------\n");
 
-	char dest1ft[] = "Aticleworld";
-	const char src1ft[] = "Amlendra";
-	printf("Before memmove >> dest1ft = %s, src1ft = %s\n\n", dest1ft, src1ft);
-	ft_memmove(dest1ft, src1ft, 5);
-	printf("After memmove >> dest1ft = %s, src1ft = %s\n\n", dest1ft, src1ft);
-	printf("---------------\n");
+	printf("%s|\n", ft_strmapi("123", &twice));
+	printf("----------\n");
+	printf("%s|\n", ft_strmapi("   ", &twice));
+	printf("----------\n");
+	printf("%s|\n", ft_strmapi("abcd", &twice));
+	printf("----------\n");
+	printf("%s|\n", ft_strmapi(" 1 23 ", &twice));
+	printf("----------\n");
+	printf("%s|\n", ft_strmapi("\n\n\t", &twice));
+	printf("----------\n");
+	printf("%s|\n", ft_strmapi("123", &product));
+	printf("----------\n");
+	printf("%s|\n", ft_strmapi("   ", &product));
+	printf("----------\n");
+	printf("%s|\n", ft_strmapi("abcdkm knkn oj pin12 n1n o3", &product));
+	printf("----------\n");
+	printf("%s|\n", ft_strmapi(" 1 23 ", &product));
+	printf("----------\n");
+	printf("%s|\n", ft_strmapi("\n\n\t", &product));
+	printf("----------\n");
+	printf("%s|\n", ft_strmapi("123", &alpha));
+	printf("----------\n");
+	printf("%s|\n", ft_strmapi("   ", &alpha));
+	printf("----------\n");
+	printf("%s|\n", ft_strmapi("abcd", &alpha));
+	printf("----------\n");
+	printf("%s|\n", ft_strmapi(" 1 23 ", &alpha));
+	printf("----------\n");
+	printf("%s|\n", ft_strmapi("\n\n\t", &alpha));
+	printf("----------\n");
+	printf("%s|\n", ft_strmapi("\n\n\tdsad 21eqw dsa12efzxc  223", &squares));
+	printf("----------\n");
+	printf("%s|\n", ft_strmapi("\n\n\tdsad 21eqw dsa12efzxc  223", &product));
+	printf("----------\n");
 
-	char str1sys[50] = "I am going from Delhi to Gorakhpur";
-	printf("Orignal :\t%s\n", str1sys);
-	printf("Source:\t\t%s\n", str1sys + 5);
-	printf("Destination:\t%s\n", str1sys + 11);
-	memmove(str1sys + 11, str1sys + 5, 29);
-	printf("Result:\t\t%s\n", str1sys);
-	printf("Length:\t\t%lu characters\n\n", strlen(str1sys));
-	printf("---------------\n");
-
-	char str1ft[50] = "I am going from Delhi to Gorakhpur";
-	printf("Orignal :\t%s\n", str1ft);
-	printf("Source:\t\t%s\n", str1ft + 5);
-	printf("Destination:\t%s\n", str1ft + 11);
-	ft_memmove(str1ft + 11, str1ft + 5, 29);
-	printf("Result:\t\t%s\n", str1ft);
-	printf("Length:\t\t%lu characters\n\n", strlen(str1ft));
-	printf("---------------\n");
-
-	char dest4sys[] = "oldstring";
-	const char src4sys[] = "newstring";
-	printf("Before memmove dest4sys = %s, src4sys = %s\n", dest4sys, src4sys);
-	memmove(dest4sys, src4sys, 9);
-	printf("After memmove dest4sys = %s, src4sys = %s\n", dest4sys, src4sys);
-	printf("---------------\n");
-
-	char dest4ft[] = "oldstring";
-	const char src4ft[] = "newstring";
-	printf("Before memmove dest4ft = %s, src4ft = %s\n", dest4ft, src4ft);
-	ft_memmove(dest4ft, src4ft, 9);
-	printf("After memmove dest4ft = %s, src4ft = %s\n", dest4ft, src4ft);
-	printf("---------------\n");
-
-	return 0;
+	return (0);
 }

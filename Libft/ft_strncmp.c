@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bkozluca <bkozluca@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/03 14:02:35 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/02/07 17:40:50 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/02/16 17:48:48 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 int	*strncmp(const char *str1, const char *str2, size_t n)
 {
 	unsigned char	u1;
-	unsigned char	u2; //register unsigned char
+	unsigned char	u2;
 
 	while (n-- > 0)
 	{

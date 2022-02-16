@@ -6,7 +6,7 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 17:15:41 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/02/16 13:05:41 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/02/16 17:48:51 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
 void	*ft_memmove(void *dst, const void *src, size_t len);
 char	*ft_strlcpy(char *dest, const char *src, size_t len);
 char	*ft_strlcat(char *restrict dst, const char *restrict src, size_t maxlen);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 char	*strchr(const char *s, int c);
 void	ft_putchar_fd(char c, int fd);
