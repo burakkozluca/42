@@ -6,13 +6,15 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 12:19:03 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/02/09 17:47:25 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/02/27 15:10:29 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int a)
+#include "libft.h"
+
+int	ft_isdigit(int c)
 {
-	if (a >= 0 && a <= 9)
+	if (c >= 0 && c <= 9)
 		return (1);
 	return (0);
 }

@@ -6,13 +6,15 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 12:35:00 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/02/09 17:47:26 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/02/27 15:14:38 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(int a)
+#include "libft.h"
+
+int	ft_isprint(int c)
 {
-	if (a <= "126" && a >= "33")
+	if (c <= "126" && c >= "33")
 		return (1);
 	return (0);
 }

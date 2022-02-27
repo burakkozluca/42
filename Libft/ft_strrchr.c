@@ -3,21 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bkozluca <bkozluca@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/03 13:04:14 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/02/03 17:23:11 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/02/27 14:02:37 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	while (*s--)
 	{
 		if (*s == c)
-			return (char *s);
+			return ((char *)s);
 	}
 	return (0);
 }

@@ -6,13 +6,15 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 12:30:25 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/02/09 17:47:23 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/02/27 15:08:36 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int a)
+#include "libft.h"
+
+int	ft_isascii(int c)
 {
-	if (a >= 0 && a <= 127)
+	if (c >= 0 && c <= 127)
 		return (1);
 	return (0);
 }
