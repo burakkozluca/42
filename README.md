@@ -4,7 +4,7 @@
 
 | Circle | Project                                | Language | Topics                                           | Date of Completion |
 | :----: | :------------------------------------- | :------: | :----------------------------------------------- | :----------------: |
-|   1    | [**Libft**](./Libft)                   |    C     | `library` `Makefile` `linked list`               |   15/  02/ 2022    |
+|   1    | [**Libft**](./Libft)                   |    C     | `library` `Makefile` `linked list`               |   15/02/2022    |
 <!--|   2    | [**get_next_line**](./2_get_next_line) |    C     | `static variable` `file descriptor`              |   2020. 04. 10.    |-->
 <!--|        | [**netwhat**](./2_netwhat)             |    -     | `network` `OSI protocols` `TCP/IP`               |   2020. 04. 10.    |-->
 <!--|        | [**ft_printf**](./2_ft_printf)         |    C     | `variadic arguments` `UTF-8` `bitwise operation` |   2020. 05. 29.    |-->
