@@ -6,7 +6,7 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 14:25:40 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/02/09 17:47:16 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/03/02 10:56:42 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	toupper(int c)
 {
-	if	(ft_isalpha(c) && (c >= 97 && c <= 122))
+	if (ft_isalpha(c) && (c >= 97 && c <= 122))
 	{
-		return (c-32);
+		return (c - 32);
 	}
 	return (c);
 }

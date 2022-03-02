@@ -6,13 +6,13 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 12:54:31 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/02/27 15:19:43 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/03/02 17:42:03 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(char *str)
+size_t	ft_strlen(const char *str)
 {
 	size_t	a;
 

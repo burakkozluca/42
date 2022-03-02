@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bkozluca <bkozluca@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 14:50:46 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/02/03 17:23:12 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/03/02 12:53:08 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int tolower(int c)
+int	tolower(int c)
 {
-	if(ft_isalpha(c) && (c >= 65 && c <= 90))
+	if (ft_isalpha(c) && (c >= 65 && c <= 90))
 	{
-		return(c + 32);
+		return (c + 32);
 	}
-	return(c);
+	return (c);
 }

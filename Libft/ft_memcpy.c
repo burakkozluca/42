@@ -6,12 +6,11 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 12:55:24 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/02/27 18:00:28 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/03/02 10:34:22 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 void	*ft_memcpy(void *dst, const void *src, size_t len)
 {
