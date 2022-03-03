@@ -6,7 +6,7 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 12:25:19 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/03/02 17:41:49 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/03/03 17:43:38 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,8 @@ int main(void)
 {
 	printf("***  ft_strnstr  ***\ndizi dizisinde ara dizisini arar len uzunluğuna kadar. \nbulduğu karakterden sonrasını döndürür. \nbulunmaz ise NULL döner");
 	char s1[30] = "pen pineapple apple pen!";
-	char* ptr = ft_strnstr(s1, "en", 10);
-	printf("%s\n", ptr);
-	char* ptr1 = ft_strnstr(s1, "en", 2);
+	char* ptr = ft_strnstr(s1, "n", 10);
+	printf("\n%s\n", ptr);
+	char* ptr1 = ft_strnstr(s1, "en", 3);
 	printf("%s\n", ptr1);
 }

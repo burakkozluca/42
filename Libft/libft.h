@@ -6,7 +6,7 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 17:15:41 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/03/02 17:41:48 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/03/03 17:43:27 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <string.h>
 # include <unistd.h>
 # include <stdlib.h>
+# include <stdio.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -37,6 +38,12 @@ int		ft_strncmp(const char *str1, const char *str2, size_t n);
 void	*ft_memchr(const void *ptr, int c, size_t n);
 int		t_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strnstr(const char *dizi, const char *ara, size_t len);
+int		ft_atoi(const char *str);
+void	*ft_calloc(size_t count, size_t size);
+char	*ft_strdup(const char *src);
+
+//extra
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_strrchr(const char *s, int c);
@@ -44,8 +51,6 @@ char	*ft_strrchr(const char *s, int c);
 char	*ft_strchr(const char *s, int c);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
-int		ft_atoi(const char *str);
-void	*ft_calloc(size_t count, size_t size);
 char	*ft_strjoin(char const *s1, char const *s2);
 
 #endif
