@@ -6,7 +6,7 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 17:15:41 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/03/03 17:43:27 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/03/06 18:40:33 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,8 +44,14 @@ char	*ft_strdup(const char *src);
 
 //extra
 char	*ft_substr(char const *s, unsigned int start, size_t len);
-
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s1, char const *set);
+char	**ft_split(char const *str, char c);
+char 	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void 	ft_striteri(char *s, void(*f)(unsigned int, char*));
+
+
 char	*ft_strrchr(const char *s, int c);
 
 char	*ft_strchr(const char *s, int c);

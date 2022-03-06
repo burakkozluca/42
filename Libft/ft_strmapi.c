@@ -6,41 +6,43 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 10:33:27 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/02/16 17:48:46 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/03/06 18:40:32 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-
-char twice(unsigned int a, char b)
-{
-	a = 0;
-	return (b + 1);
-}
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t	i;
-	size_t	size;
-	char	*res;
+	char	*src_ptr;
+	int		src_len;
+	int		i;
 
-	if (s == NULL)
-		return (NULL);
-	size = ft_strlen((char *)s);
-	res = (char *)malloc(size + 1 * sizeof(char));
-	if (res == NULL)
-		return (NULL);
 	i = 0;
-	while (i < size)
+	if (!s)
+		return (0);
+	src_len = ft_strlen(s);
+	src_ptr = (char *) malloc((src_len + 1) * sizeof(char));
+	if (!src_ptr)
+		return (0);
+	while (i < src_len)
 	{
-		res[i] = (*f)(i, s[i]);
+		src_ptr[i] = f(i, (char )(s[i]));
 		i++;
 	}
-	res[i] = 0;
-	return (res);
+	src_ptr[i] = '\0';
+	return (src_ptr);
+}
+char f(unsigned int i, char c)
+{
+	char str;
+	str = c + 3;
+	return (str);
 }
 int main(void)
 {
-	printf("%s|\n", ft_strmapi("123", &twice));
+	char str1[] = "abc";
+	char* str2;
+	str2 = ft_strmapi(str1, *f);
+	printf("%s\n", str2);
 }
