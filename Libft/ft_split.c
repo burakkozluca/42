@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
+/*   By: burakkozluca <burakkozluca@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 14:12:58 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/03/06 18:21:34 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/03/07 12:31:54 by burakkozluc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,20 +103,20 @@ char	**ft_split(char const *str, char c)
 }
 int main(void)
 {
-// 	char *str = "burak kozluca afqwer qweqwrf";
-// 	char bos = ' ';
-// 	char **dizi = ft_split(str,bos);
-// 	printf("%s",dizi[0]);
-// 	printf("\n%s",dizi[1]);
-//
-	printf("// gönderilen karakterden sonrasını alır ve yenı dızı olusturur\n");
-	int i = 0;
-	char **tab;
-	char *x = "Mü ac";
-	tab = ft_split(x, ' ');
-	while (i < ft_strlen(*tab))
-	{
-		printf("string %d : %s\n", i, tab[i]);
-		i++;
-	}
+	char *str = "burak kozluca afqwer qweqwrf";
+	char bos = ' ';
+	char **dizi = ft_split(str,bos);
+	printf("%s",*(dizi));
+	printf("\n%c",*(*(dizi + 2) + 3));
+
+	// printf("// gönderilen karakterden sonrasını alır ve yenı dızı olusturur\n");
+	// int i = 0;
+	// char **tab;
+	// char *x = "Mü ac";
+	// tab = ft_split(x, ' ');
+	// while (i < ft_strlen(*tab))
+	// {
+	// 	printf("string %d : %s\n", i, tab[i]);
+	// 	i++;
+	// }
 }

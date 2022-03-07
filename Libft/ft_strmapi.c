@@ -3,15 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
+/*   By: burakkozluca <burakkozluca@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 10:33:27 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/03/06 18:40:32 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/03/07 13:38:15 by burakkozluc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+size_t	ft_strlen(const char *str)
+{
+	size_t	a;
 
+	a = 0;
+	while (str[a] != '\0')
+	{
+		a++;
+	}
+	return (a);
+}
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char	*src_ptr;
