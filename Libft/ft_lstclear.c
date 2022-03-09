@@ -1,22 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/08 15:19:24 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/03/09 17:43:42 by bkozluca         ###   ########.fr       */
+/*   Created: 2022/03/09 14:27:04 by bkozluca          #+#    #+#             */
+/*   Updated: 2022/03/09 17:43:31 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl_fd(char *s, int fd)
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	if (s != '\0')
+	t_list	*gec;
+	t_list	*tmp;
+
+	if (!del || !lst)
+		return ;
+	gec = *lst;
+	while (gec != NULL)
 	{
-		ft_putstr_fd(s, fd);
-		ft_putchar_fd('\n', fd);
+		tmp = gec->next;
+		ft_lstdelone(gec, del);
+		gec = tmp;
 	}
+	*lst = NULL;
 }

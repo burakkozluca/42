@@ -1,22 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/08 15:19:24 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/03/09 17:43:42 by bkozluca         ###   ########.fr       */
+/*   Created: 2022/03/09 11:10:41 by bkozluca          #+#    #+#             */
+/*   Updated: 2022/03/09 17:43:34 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl_fd(char *s, int fd)
+t_list	*ft_lstlast(t_list *lst)
 {
-	if (s != '\0')
+	t_list	*gec;
+
+	if (!lst)
+		return (NULL);
+	gec = lst;
+	while (gec->next != NULL)
 	{
-		ft_putstr_fd(s, fd);
-		ft_putchar_fd('\n', fd);
+		gec = gec->next;
 	}
+	return (gec);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: burakkozluca <burakkozluca@student.42.f    +#+  +:+       +#+        */
+/*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 12:25:19 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/03/09 07:59:32 by burakkozluc      ###   ########.fr       */
+/*   Updated: 2022/03/09 17:43:39 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

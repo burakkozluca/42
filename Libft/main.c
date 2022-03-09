@@ -247,8 +247,8 @@ void	test_strjoin ()
 void	test_strtrim ()
 {
 	printf("\nbaştan ve sondan ikinci gönderilen dizideki karakterleri arar.başta  buldursa son karaltere kadar siler sonda bulursa bulduğu ilk karakterden itibaren siler");
-	printf("%s\n", ft_strtrim("abtabacq", "abc"));
-	printf("%s\n", ft_strtrim("xavocadoyz", "xyz"));
+	printf("\n%s\n", ft_strtrim("abacq", " a"));
+	printf("%s\n", ft_strtrim("xavocad", "xa"));
 	alt_cizhi();
 }
 
@@ -267,14 +267,14 @@ void	test_split ()
 	alt_cizhi();
 }
 
-// void	test_itoa ()
-// {
-// 	printf("//gönderilen int diziyi str dönüştürür.\n");
-// 	printf("%s\n", ft_itoa(0));
-// 	printf("%s\n", ft_itoa(987654321));
-// 	printf("%s\n", ft_itoa(-123456789));
-// 	alt_cizhi();
-// }
+void	test_itoa ()
+{
+	printf("//gönderilen int diziyi str dönüştürür.\n");
+	printf("%s\n", ft_itoa(0));
+	printf("%s\n", ft_itoa(987654321));
+	printf("%s\n", ft_itoa(-123456789));
+	alt_cizhi();
+}
 
 char f(unsigned int i, char c)
 {
@@ -295,8 +295,8 @@ void	test_strmapi ()
 void	test_striteri ()
 {
 	char str[] = "merhaba";
-// 	ft_striteri(str, *f);
-// 	printf("%s",str);
+ 	ft_striteri(str, *f);
+ 	printf("%s",str);
 alt_cizhi();
 }
 
