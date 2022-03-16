@@ -6,28 +6,35 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 12:08:40 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/03/02 12:55:12 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/03/16 17:09:01 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-char	*ft_strlcat(char *dst, const char *src, size_t maxlen)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	const size_t	srclen = strlen(src);
-	const size_t	dstlen = strnlen(dst, maxlen);
+	size_t	i;
+	size_t	j;
+	size_t	dst_len;
+	size_t	src_len;
 
-	if (dstlen == maxlen)
-		return ((char *)maxlen + srclen);
-	if (srclen < maxlen - dstlen)
+	dst_len = ft_strlen(dst);
+	src_len = ft_strlen(src);
+	if (dstsize < 1)
+		return (src_len);
+	if (dstsize < dst_len)
+		return (dstsize + src_len);
+	i = dst_len;
+	j = 0;
+	while (*(src + j) && (i < dstsize - 1))
 	{
-		ft_memcpy(dst + dstlen, src, srclen + 1);
+		*(dst + i) = *(src + j);
+		i++;
+		j++;
 	}
-	else
-	{
-		ft_memcpy(dst + dstlen, src, maxlen - 1);
-		dst[dstlen + maxlen - 1] = '\0';
-	}
-	return ((char *)dstlen + srclen);
+	*(dst + i) = '\0';
+	if (dstsize < dst_len)
+		return (src_len + dstsize);
+	return (src_len + dst_len);
 }

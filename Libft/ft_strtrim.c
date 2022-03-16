@@ -6,35 +6,12 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 12:39:19 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/03/09 17:43:27 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/03/16 11:57:34 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <string.h>
-
-size_t	ft_strlen(const char *str)
-{
-	size_t	a;
-
-	a = 0;
-	while (str[a] != '\0')
-	{
-		a++;
-	}
-	return (a);
-}
-
-char	*ft_strchr(const char *s, int c)
-{
-	while (*s)
-	{
-		if (*s == c)
-			return ((char *)s);
-		s++;
-	}
-	return (0);
-}
 
 int	ft_getstart(const char *s1, const char *set)
 {
@@ -87,11 +64,4 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (NULL);
 	ft_strlcpy(newstr, s1 + start, end - start + 1);
 	return (newstr);
-}
-int main(void)
-{
-
-	printf("\nbaştan ve sondan ikinci gönderilen dizideki karakterleri arar.başta  buldursa son karaltere kadar siler sonda bulursa bulduğu ilk karakterden itibaren siler");
-	printf("\n%s\n", ft_strtrim("abacq", " a"));
-	printf("%s\n", ft_strtrim("xavocadax", "xa"));
 }

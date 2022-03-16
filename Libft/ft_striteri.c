@@ -6,7 +6,7 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/06 18:28:55 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/03/09 17:43:25 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/03/16 16:33:42 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,15 +25,11 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		i++;
 	}
 }
-char f(unsigned int i, char c)
+
+char	f(unsigned int i, char c)
 {
-	char str;
+	char	str;
+
 	str = c + 3;
 	return (str);
-}
-int main(void)
-{
-	char str[] = "merhaba";
- 	ft_striteri(str, (void *)f);
- 	printf("%s",str);
 }

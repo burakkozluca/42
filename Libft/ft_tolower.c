@@ -6,13 +6,13 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 14:50:46 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/03/02 12:53:08 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/03/16 12:03:11 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	tolower(int c)
+int	ft_tolower(int c)
 {
 	if (ft_isalpha(c) && (c >= 65 && c <= 90))
 	{

@@ -3,27 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: burakkozluca <burakkozluca@student.42.f    +#+  +:+       +#+        */
+/*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 16:58:13 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/03/07 12:53:37 by burakkozluc      ###   ########.fr       */
+/*   Updated: 2022/03/16 11:57:59 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <string.h>
-
-size_t	ft_strlen(const char *str)
-{
-	size_t	a;
-
-	a = 0;
-	while (str[a] != '\0')
-	{
-		a++;
-	}
-	return (a);
-}
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -42,12 +30,4 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		str[i++] = s[start++];
 	str[i] = '\0';
 	return (str);
-}
-
-int	main(void)
-{
-	printf("s dizisinin start tan başlayıp len kadar geri gönderir");
-	char* str;
-	str = ft_substr("Hell", 7, 2);
-	printf("\n%s\n", str);
 }

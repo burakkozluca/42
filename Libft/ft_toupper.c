@@ -6,13 +6,13 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 14:25:40 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/03/02 10:56:42 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/03/16 12:03:47 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	toupper(int c)
+int	ft_toupper(int c)
 {
 	if (ft_isalpha(c) && (c >= 97 && c <= 122))
 	{

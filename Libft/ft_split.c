@@ -3,45 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: burakkozluca <burakkozluca@student.42.f    +#+  +:+       +#+        */
+/*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 14:12:58 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/03/07 12:31:54 by burakkozluc      ###   ########.fr       */
+/*   Updated: 2022/03/16 11:57:15 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-size_t	ft_strlen(const char *str)
-{
-	size_t	a;
-
-	a = 0;
-	while (str[a] != '\0')
-	{
-		a++;
-	}
-	return (a);
-}
-
-char	*ft_substr(char const *s, unsigned int start, size_t len)
-{
-	char	*str;
-	size_t	i;
-
-	i = 0;
-	if (s == NULL)
-		return (NULL);
-	str = (char *)malloc(sizeof(char) * len + 1);
-	if (!str)
-		return (NULL);
-	if (start >= ft_strlen(s))
-		return (str);
-	while (i < len && s[start] != '\0')
-		str[i++] = s[start++];
-	str[i] = '\0';
-	return (str);
-}
 
 int	ft_wordcounter(const char *str, char c)
 {
@@ -100,23 +69,4 @@ char	**ft_split(char const *str, char c)
 	}
 	ret[retindex] = NULL;
 	return (ret);
-}
-int main(void)
-{
-	char *str = "burak kozluca afqwer qweqwrf";
-	char bos = ' ';
-	char **dizi = ft_split(str,bos);
-	printf("%s",*(dizi));
-	printf("\n%c",*(*(dizi + 2) + 3));
-
-	// printf("// gönderilen karakterden sonrasını alır ve yenı dızı olusturur\n");
-	// int i = 0;
-	// char **tab;
-	// char *x = "Mü ac";
-	// tab = ft_split(x, ' ');
-	// while (i < ft_strlen(*tab))
-	// {
-	// 	printf("string %d : %s\n", i, tab[i]);
-	// 	i++;
-	// }
 }

@@ -6,7 +6,7 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 15:19:24 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/03/09 17:43:42 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/03/16 11:46:52 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,10 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	if (s != '\0')
-	{
-		ft_putstr_fd(s, fd);
-		ft_putchar_fd('\n', fd);
-	}
+	if (fd < 0)
+		return ;
+	if (!s)
+		return ;
+	ft_putstr_fd(s, fd);
+	write(fd, "\n", 1);
 }

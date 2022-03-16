@@ -6,7 +6,7 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 16:36:24 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/03/09 17:43:24 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/03/16 12:27:35 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s)
+	while (*s != '\0' || c == '\0')
 	{
 		if (*s == c)
 			return ((char *)s);

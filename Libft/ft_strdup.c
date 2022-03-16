@@ -6,7 +6,7 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 16:36:30 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/03/03 17:43:32 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/03/16 11:53:52 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,4 @@ char	*ft_strdup(const char *src)
 		result[i] = src[i];
 	result[i] = '\0';
 	return (result);
-}
-
-int	main(void)
-{
-	printf("***  ft_strdup  ***\nGönderilen karakterin benzerini oluşturu\ndizinin koyasını bellekte başka bi bölgeye kopyalar ve dönderir");
-	printf("\n%s\n", ft_strdup("Hello world!"));
 }

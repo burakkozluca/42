@@ -3,25 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: burakkozluca <burakkozluca@student.42.f    +#+  +:+       +#+        */
+/*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 10:33:27 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/03/07 13:38:15 by burakkozluc      ###   ########.fr       */
+/*   Updated: 2022/03/16 11:54:56 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-size_t	ft_strlen(const char *str)
-{
-	size_t	a;
 
-	a = 0;
-	while (str[a] != '\0')
-	{
-		a++;
-	}
-	return (a);
-}
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char	*src_ptr;
@@ -42,17 +32,4 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	}
 	src_ptr[i] = '\0';
 	return (src_ptr);
-}
-char f(unsigned int i, char c)
-{
-	char str;
-	str = c + 3;
-	return (str);
-}
-int main(void)
-{
-	char str1[] = "abc";
-	char* str2;
-	str2 = ft_strmapi(str1, *f);
-	printf("%s\n", str2);
 }

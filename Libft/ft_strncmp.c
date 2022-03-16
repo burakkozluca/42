@@ -6,7 +6,7 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/03 14:02:35 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/03/02 17:41:59 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/03/16 11:55:08 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,4 @@ int	ft_strncmp(const char *str1, const char *str2, size_t n)
 			return (0);
 	}
 	return (0);
-}
-
-int	main(void)
-{
-	printf("***  ft_strncmp  ***\ns1 dizisi s2 dizisine eşit mi büyükmü küçükmü kontrol eder");
-	char *x = "abdefg";
-	char *y = "abdefg";
-	int z = ft_strncmp(x,y,8);
-	printf("\n%d",z);
 }

@@ -6,7 +6,7 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/03 15:57:50 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/03/02 17:41:53 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/03/16 11:51:43 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,4 @@ void	*ft_memchr(const void *ptr, int c, size_t n)
 	if (c == '\0')
 		return ((void *)ptr + i);
 	return (NULL);
-}
-
-int	main(void)
-{
-	printf("***  ft_memchr  ***\nstr dizisinde c dizisini n karakterine kadar arar\nbulduğu karakterden sonrasını bastırı\nbulamadığı durumda null basar");
-	char  str[] = "www.42kocaeli.tr";
-	printf("\n%s\n", ft_memchr(str, '.', 7));
-	printf("%s\n", memchr(str, '.', 7));
 }

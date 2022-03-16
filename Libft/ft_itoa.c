@@ -6,13 +6,13 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 14:23:13 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/03/06 18:40:28 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/03/16 11:50:44 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	ft_get_digit(int n)//basamak sayısı bulma
+static size_t	ft_get_digit(int n)
 {
 	size_t	count;
 
