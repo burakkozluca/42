@@ -1,4 +1,4 @@
-* [`ft_isalpha`](Libft/ft_isalpha.c)			    - alfabetik karakter testi.
+* [`ft_isalpha`](ft_isalpha.c)			    - alfabetik karakter testi.
 * [`ft_isdigit`](Libft/ft_isdigit.c)			    - decimal-digit (alfa numerik) karakter testi
 * [`ft_isalnum`](Libft/ft_isalnum.c)			    - alfanümerik karakter testi.
 * [`ft_isascii`](Libft/ft_isascii.c)			    - ASCII karakter testi.
