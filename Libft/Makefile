@@ -10,7 +10,7 @@ BONUS=
 BONUS_OBJS=$(BONUS:.c=.o)
 
 CC=gcc
-CFLAGS=-I. -Wall -Wextra -Werror
+CFLAGS= -Wall -Wextra -Werror
 
 .PHONY: all clean fclean re bonus
 

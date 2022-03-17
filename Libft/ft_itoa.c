@@ -6,7 +6,7 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 14:23:13 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/03/16 11:50:44 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/03/17 14:03:23 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static size_t	ft_get_digit(int n)
 	return (count);
 }
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	char		*nstr;
 	size_t		dgt;
