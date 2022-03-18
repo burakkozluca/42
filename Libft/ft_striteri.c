@@ -6,7 +6,7 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/06 18:28:55 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/03/17 14:03:16 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/03/18 14:53:22 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,4 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		f(i, &s[i]);
 		i++;
 	}
-}
-
-char	f(unsigned int i, char c)
-{
-	char	str;
-
-	str = c + 3;
-	return (str);
 }

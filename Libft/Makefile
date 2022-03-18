@@ -5,8 +5,6 @@ SRCS=$(wildcard *.c)
 
 OBJS=$(SRCS:.c=.o)
 
-BONUS=
-
 BONUS_OBJS=$(BONUS:.c=.o)
 
 CC=gcc
