@@ -18,26 +18,26 @@
 * [`ft_memchr`](ft_memchr.c)		    - ptr dizisinin len kadar uzunluğunda c karakterinin geçtiği yeri arar. Bellek adresini geri döndürür.
 * [`ft_memcmp`](ft_memcmp.c)		    - s1 dizisinin len kadar uzunlğunda s2 parametresini karşılaştırır. Bu işi bellekte yapar (strncmp'den farkı)
 * [`ft_strnstr`](ft_strnstr.c)			- ara dizisini esas dizinin baştan len kadar uzunluğunda yeri var mı onu bulur.
-* [`ft_atoi`](ft_atoi.c)		        -
-* [`ft_calloc`](ft_calloc.c)	          
-* [`ft_strdup`](ft_strdup.c)		
-* [`ft_substr`](ft_substr.c)			    
-* [`ft_strjoin`](ft_strjoin.c)			  
-* [`ft_strtrim`](ft_strtrim.c)	
-* [`ft_split`](ft_split.c)				
-* [`ft_itoa`](ft_itoa.c)		
-* [`ft_strmapi`](ft_strmapi.c)			   
-* [`ft_striteri`](ft_striteri.c)		 
-* [`ft_putchar_fd`](ft_putchar_fd.c)
-* [`ft_putstr_fd`](ft_putstr_fd.c)	
-* [`ft_putendl_fd`](ft_putendl_fd.c)
-* [`ft_putnbr_fd`](ft_putnbr_fd.c)		
-* [`ft_lstnew`](ft_lstnew.c)		
-* [`ft_lstadd_front`](ft_lstadd_front.c)  
-* [`ft_lstsize`](ft_lstsize.c)		
-* [`ft_lstlast`](ft_lstlast.c)		
-* [`ft_lstadd_back`](ft_lstadd_back.c)	  
-* [`ft_lstdelone`](ft_lstdelone.c)		
-* [`ft_lstclear`](ft_lstclear.c)			
-* [`ft_lstiter`](ft_lstiter.c)		
-* [`ft_lstmap`](ft_lstmap.c)
+* [`ft_atoi`](ft_atoi.c)		        - Karakter dizisini int'e çevirir.
+* [`ft_calloc`](ft_calloc.c)	      - Size parametre değeri kadar olan bellekten num parametre değeri kadar sayıda bellek bloğunu tahsis eder ve tahsis edilen belleğin tamamını sıfır değeri ile doldurur.
+* [`ft_strdup`](ft_strdup.c)		    - Str parametresi ile gösterilen karakter dizisinin aynısını geri döndürür. (Bellekte yer açarak geri döndürür.)
+* [`ft_substr`](ft_substr.c)			  - S dizisinin istenilen indisinden başlayarak len uzunluğu kadar yazdırır.
+* [`ft_strjoin`](ft_strjoin.c)			- İki stringi birbirine bağlar.
+* [`ft_strtrim`](ft_strtrim.c)	    - 
+* [`ft_split`](ft_split.c)				  - Diziyi istenilen karakterlerden bölerek yeni bir alt dizi oluşturur.
+* [`ft_itoa`](ft_itoa.c)		        - int ifadeyi ASCII'ye dönüştürür.
+* [`ft_strmapi`](ft_strmapi.c)			- s dizisinin her bir karakterine f fonksiyonunu uygular. Bellekte yeni oluşturduğu diziye kopyalar.
+* [`ft_striteri`](ft_striteri.c)		- strmapi gibi ama tek bir fark o da yeni dizi oluşturmaz. Olan dizi üzerinde değişiklik yapar.
+* [`ft_putchar_fd`](ft_putchar_fd.c)- write fonksiyonu
+* [`ft_putstr_fd`](ft_putstr_fd.c)	- 
+* [`ft_putendl_fd`](ft_putendl_fd.c)-
+* [`ft_putnbr_fd`](ft_putnbr_fd.c)	-	
+* [`ft_lstnew`](ft_lstnew.c)		    - 
+* [`ft_lstadd_front`](ft_lstadd_front.c)-  
+* [`ft_lstsize`](ft_lstsize.c)		  -
+* [`ft_lstlast`](ft_lstlast.c)		  -
+* [`ft_lstadd_back`](ft_lstadd_back.c)-	  
+* [`ft_lstdelone`](ft_lstdelone.c)	-	
+* [`ft_lstclear`](ft_lstclear.c)		-	
+* [`ft_lstiter`](ft_lstiter.c)		  -
+* [`ft_lstmap`](ft_lstmap.c)        -
