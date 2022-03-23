@@ -1,15 +1,15 @@
-* [`ft_isalpha`](ft_isalpha.c)			   
-* [`ft_isdigit`](ft_isdigit.c)			 
-* [`ft_isalnum`](ft_isalnum.c)		
-* [`ft_isascii`](ft_isascii.c)			    
-* [`ft_isprint`](ft_isprint.c)			   
-* [`ft_strlen`](ft_strlen.c)			  
-* [`ft_memset`](ft_memset.c)		       
-* [`ft_bzero`](ft_bzero.c)		            
-* [`ft_memcpy`](ft_memcpy.c)		     
-* [`ft_memmove`](ft_memmove.c)	        
-* [`ft_strlcpy`](ft_strlcpy.c)			    
-* [`ft_strlcat`](ft_strlcat.c)			   
+* [`ft_isalpha`](ft_isalpha.c)			- Alfabetik karakter olup olmadığını kontrol eder.
+* [`ft_isdigit`](ft_isdigit.c)			- Rakam olup olmadığını kontrol eder.
+* [`ft_isalnum`](ft_isalnum.c)		  - Alfabetik bir harf ve bir rakam olup olmadığını eder.
+* [`ft_isascii`](ft_isascii.c)			- ASCII karakter olup olmadığını kontrol eder.
+* [`ft_isprint`](ft_isprint.c)			- Yazdırılabilir bir karakter olup olmadığını kontrol eder.
+* [`ft_strlen`](ft_strlen.c)			  - Dizi uzunluğunu bulur.
+* [`ft_memset`](ft_memset.c)		    - Girilen dizinin len kadar uzunluğuna c parametresini kopyalar.
+* [`ft_bzero`](ft_bzero.c)		      - Girilen dizinin len kadar uzunluğuna 0 kopyalar.
+* [`ft_memcpy`](ft_memcpy.c)		    - Src dizisinin karakterlerinin len kadar uzunluğunu dst'e kopyalar.
+* [`ft_memmove`](ft_memmove.c)	    - Src dizisinin karakterlerinin len kadar uzunluğunu dst'ye kopyalar. Overlapping olmaz!  
+* [`ft_strlcpy`](ft_strlcpy.c)			- Src dizisinin karakterlerinin(\0 ile sonlandırılmış) len kadar uzunluğunu dst'ye (\0 ile sonlandırılmış) kopyalar. 
+* [`ft_strlcat`](ft_strlcat.c)			- Src    
 * [`ft_toupper`](ft_toupper.c)			   
 * [`ft_tolower`](ft_tolower.c)			   
 * [`ft_strchr`](ft_strchr.c)			    
