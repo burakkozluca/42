@@ -12,7 +12,7 @@
 * [`ft_strlcat`](ft_strlcat.c)			- Src dizisinin len parametre değeri kadar ilk karakterini,dst'nin sonuna ekleyerek yeni bir karakter dizisi oluşturur.
 * [`ft_toupper`](ft_toupper.c)			- Küçük harfi büyük harfe çevirir.
 * [`ft_tolower`](ft_tolower.c)			- Büyük harfi küçük harfe çevirir.   
-* [`ft_strchr`](ft_strchr.c)			  - s dizisinde c parametresi ile gösterilen karakterin *ilk* geçtiği yeri arar. Bellek adresini gösteren işaretçi geri döndürür.
+* [`ft_strchr`](ft_strchr.c)			  - s dizisinde c parametresi ile gösterilen karakterin *ilk geçtiği yeri arar. Bellek adresini gösteren işaretçi geri döndürür.
 * [`ft_strrchr`](ft_strrchr.c)			- s dizisinde c parametresi ile gösterilen karakterinin *son* geçtiği yeri arar. Bellek adresini gösteren işaretçi geri döndürür.    
 * [`ft_strncmp`](ft_strncmp.c) 			    
 * [`ft_memchr`](ft_memchr.c)		    
