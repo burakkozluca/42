@@ -9,11 +9,11 @@
 * [`ft_memcpy`](ft_memcpy.c)		    - Src dizisinin karakterlerinin len kadar uzunluğunu dst'e kopyalar.
 * [`ft_memmove`](ft_memmove.c)	    - Src dizisinin karakterlerinin len kadar uzunluğunu dst'ye kopyalar. Overlapping olmaz!  
 * [`ft_strlcpy`](ft_strlcpy.c)			- Src dizisinin karakterlerinin(\0 ile sonlandırılmış) len kadar uzunluğunu dst'ye (\0 ile sonlandırılmış) kopyalar. 
-* [`ft_strlcat`](ft_strlcat.c)			- Src    
-* [`ft_toupper`](ft_toupper.c)			   
-* [`ft_tolower`](ft_tolower.c)			   
-* [`ft_strchr`](ft_strchr.c)			    
-* [`ft_strrchr`](ft_strrchr.c)			    
+* [`ft_strlcat`](ft_strlcat.c)			- Src dizisinin len parametre değeri kadar ilk karakterini,dst'nin sonuna ekleyerek yeni bir karakter dizisi oluşturur.
+* [`ft_toupper`](ft_toupper.c)			- Küçük harfi büyük harfe çevirir.
+* [`ft_tolower`](ft_tolower.c)			- Büyük harfi küçük harfe çevirir.   
+* [`ft_strchr`](ft_strchr.c)			  - s dizisinde c parametresi ile gösterilen karakterin _ilk_ geçtiği yeri arar. Bellek adresini gösteren işaretçi geri döndürür.
+* [`ft_strrchr`](ft_strrchr.c)			- s dizisinde c parametresi ile gösterilen karakterinin _son_ geçtiği yeri arar. Bellek adresini gösteren işaretçi geri döndürür.    
 * [`ft_strncmp`](ft_strncmp.c) 			    
 * [`ft_memchr`](ft_memchr.c)		    
 * [`ft_memcmp`](ft_memcmp.c)		   
