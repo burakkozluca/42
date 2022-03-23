@@ -14,11 +14,11 @@
 * [`ft_tolower`](ft_tolower.c)			- Büyük harfi küçük harfe çevirir.   
 * [`ft_strchr`](ft_strchr.c)			  - s dizisinde c parametresi ile gösterilen karakterin *ilk geçtiği yeri arar. Bellek adresini gösteren işaretçi geri döndürür.
 * [`ft_strrchr`](ft_strrchr.c)			- s dizisinde c parametresi ile gösterilen karakterinin *son* geçtiği yeri arar. Bellek adresini gösteren işaretçi geri döndürür.    
-* [`ft_strncmp`](ft_strncmp.c) 			    
-* [`ft_memchr`](ft_memchr.c)		    
-* [`ft_memcmp`](ft_memcmp.c)		   
-* [`ft_strnstr`](ft_strnstr.c)			    
-* [`ft_atoi`](ft_atoi.c)		          
+* [`ft_strncmp`](ft_strncmp.c) 			- str1 dizisinin len kadar ilk uzunluğunu str2 dizisi ile karşılaştırır.    
+* [`ft_memchr`](ft_memchr.c)		    - ptr dizisinin len kadar uzunluğunda c karakterinin geçtiği yeri arar. Bellek adresini geri döndürür.
+* [`ft_memcmp`](ft_memcmp.c)		    - s1 dizisinin len kadar uzunlğunda s2 parametresini karşılaştırır. Bu işi bellekte yapar (strncmp'den farkı)
+* [`ft_strnstr`](ft_strnstr.c)			- ara dizisini esas dizinin baştan len kadar uzunluğunda yeri var mı onu bulur.
+* [`ft_atoi`](ft_atoi.c)		        -
 * [`ft_calloc`](ft_calloc.c)	          
 * [`ft_strdup`](ft_strdup.c)		
 * [`ft_substr`](ft_substr.c)			    
