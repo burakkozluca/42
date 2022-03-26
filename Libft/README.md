@@ -31,7 +31,7 @@
 * [`ft_putchar_fd`](ft_putchar_fd.c)- write fonksiyonu
 * [`ft_putstr_fd`](ft_putstr_fd.c)	- s stringini file descriptor içine yazar.
 * [`ft_putendl_fd`](ft_putendl_fd.c)- s stringinin sonuna \n koyup file descriptora yazar.
-* [`ft_putnbr_fd`](ft_putnbr_fd.c)	-	
+* [`ft_putnbr_fd`](ft_putnbr_fd.c)	- n değerinin çıktısını verilen file descriptora yazar.
 * [`ft_lstnew`](ft_lstnew.c)		    - 
 * [`ft_lstadd_front`](ft_lstadd_front.c)-  
 * [`ft_lstsize`](ft_lstsize.c)		  -
