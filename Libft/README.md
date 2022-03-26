@@ -23,7 +23,7 @@
 * [`ft_strdup`](ft_strdup.c)		    - Str parametresi ile gösterilen karakter dizisinin aynısını geri döndürür. (Bellekte yer açarak geri döndürür.)
 * [`ft_substr`](ft_substr.c)			  - S dizisinin istenilen indisinden başlayarak len uzunluğu kadar yazdırır.
 * [`ft_strjoin`](ft_strjoin.c)			- İki stringi birbirine bağlar.
-* [`ft_strtrim`](ft_strtrim.c)	    - 
+* [`ft_strtrim`](ft_strtrim.c)	    - set parametresinin elemanları baştan ve sondan bakılarak s dizisinin başında ve sonunda bulunuyor mu bakılır. Bulunuyorsa o karakterler silinir ve yeni string döndürülür.
 * [`ft_split`](ft_split.c)				  - Diziyi istenilen karakterlerden bölerek yeni bir alt dizi oluşturur.
 * [`ft_itoa`](ft_itoa.c)		        - int ifadeyi ASCII'ye dönüştürür.
 * [`ft_strmapi`](ft_strmapi.c)			- s dizisinin her bir karakterine f fonksiyonunu uygular. Bellekte yeni oluşturduğu diziye kopyalar.
