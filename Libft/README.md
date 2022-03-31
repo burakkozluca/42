@@ -1,4 +1,4 @@
-* [`ft_isalpha`](ft_isalpha.c)			- Alfabetik karakter olup olmadığını kontrol eder.
+* [`ft_isalpha`](libft/ft_isalpha.c)			- Alfabetik karakter olup olmadığını kontrol eder.
 * [`ft_isdigit`](ft_isdigit.c)			- Rakam olup olmadığını kontrol eder.
 * [`ft_isalnum`](ft_isalnum.c)		  - Alfabetik bir harf ve bir rakam olup olmadığını eder.
 * [`ft_isascii`](ft_isascii.c)			- ASCII karakter olup olmadığını kontrol eder.
