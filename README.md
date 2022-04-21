@@ -5,8 +5,8 @@
 | Circle | Project                                | Language | Topics                                           | Date of Completion |
 | :----: | :------------------------------------- | :------: | :----------------------------------------------- | :----------------: |
 |   1    | [**Libft**](./Libft)                   |    C     | `library` `Makefile` `linked list`               |   17/03/2022    |
-|   2    | [**get_next_line**](./2_get_next_line) |    C     | `static variable` `file descriptor`              |   ***    |
-|        | [**ft_printf**](./2_ft_printf)         |    C     | `variadic arguments` `UTF-8` `bitwise operation` |   ***    |
+|   2    | [**get_next_line**](./get_next_line) |    C     | `static variable` `file descriptor`              |   ***    |
+|        | [**ft_printf**](./ft_printf)         |    C     | `variadic arguments` `UTF-8` `bitwise operation` |   ***    |
 <!--|        | [**netwhat**](./2_netwhat)             |    -     | `network` `OSI protocols` `TCP/IP`               |   2020. 04. 10.    |-->
 <!--|   3    | [**ft_server**](./3_ft_server)         |    Go    | `docker` `immutable infrastructure` `server`     |   2020. 08. 23.    |-->
 <!--|        | [**cub3d**](./3_cub3d)                 |    C     | `raycasting` `graphic design` `algorithm`        |   2020. 11. 10.    |-->
