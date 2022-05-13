@@ -6,7 +6,7 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 15:13:00 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/05/09 15:17:00 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/05/13 15:46:05 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,6 @@
 # include <stdarg.h>
 
 int		ft_printf(const char *str, ...);
+int		ft_is_c(int c);
 
 #endif
