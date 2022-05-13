@@ -1,36 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_formats.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/09 15:11:55 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/05/13 15:48:17 by bkozluca         ###   ########.fr       */
+/*   Created: 2022/05/13 15:39:28 by bkozluca          #+#    #+#             */
+/*   Updated: 2022/05/13 15:49:06 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/ft_printf.h"
 
-int	ft_printf(const char *str, ...)
+int	ft_formats(va_list args, const char format)
 {
-	int		i;
-	va_list	args;
-	int		len;
+	int	print_len;
 
-	i = 0;
-	len = 0;
-	va_start(args, str);
-	while (str[i])
-	{
-		if (str[i] == '%')
-		{
-			len += ft_formats(args, str[i + 1]);
-		}
-		else
-			len += ft_is_c(str[i]);
-		i++;
-	}
-	va_end(args);
-	return (len);
+	print_len = 0;
+	if (format == 'c')
+		print_len += ft_is_c(va_arg(args, int));
+	else if (format == '')
+		print_len +=
 }
