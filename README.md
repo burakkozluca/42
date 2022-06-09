@@ -1,4 +1,4 @@
-<p><img src="./main/header/header_ecole42.png" alt="42 Logo.svg" width="142"></p>
+<p><img src="./header/header_ecole42.png" alt="42 Logo.svg" width="142"></p>
 
 ## Common Circle
 
