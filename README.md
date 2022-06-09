@@ -1,4 +1,4 @@
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/8/8d/42_Logo.svg" alt="42 Logo.svg" width="142"></p>
+<p><img src="./blob/main/header/header_ecole42.png" alt="42 Logo.svg" width="142"></p>
 
 ## Common Circle
 
