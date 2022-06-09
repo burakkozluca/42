@@ -6,11 +6,11 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 09:50:06 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/06/09 12:25:15 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/06/09 13:33:57 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ft_printf.h"
+#include "ft_printf.h"
 
 int	ft_print_nbr(int n)
 {

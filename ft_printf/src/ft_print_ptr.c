@@ -6,11 +6,11 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 15:25:19 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/06/09 12:25:17 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/06/09 13:33:55 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ft_printf.h"
+#include "ft_printf.h"
 
 int	ptr_len(unsigned long long p)
 {
