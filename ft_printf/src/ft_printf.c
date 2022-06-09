@@ -6,11 +6,17 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 15:11:55 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/05/13 15:48:17 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/06/09 12:25:14 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/ft_printf.h"
+
+int	ft_print_char(int c)
+{
+	write(1, &c, 1);
+	return (1);
+}
 
 int	ft_printf(const char *str, ...)
 {
@@ -25,10 +31,10 @@ int	ft_printf(const char *str, ...)
 	{
 		if (str[i] == '%')
 		{
-			len += ft_formats(args, str[i + 1]);
+			len += ft_formats(args, str[++i]);
 		}
 		else
-			len += ft_is_c(str[i]);
+			len += ft_print_char(str[i]);
 		i++;
 	}
 	va_end(args);

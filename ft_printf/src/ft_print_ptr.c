@@ -6,53 +6,45 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 15:25:19 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/06/06 16:46:55 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/06/09 12:25:17 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ft_print.h"
+#include "../include/ft_printf.h"
 
-int	ft_ptr_len(unsigned long num)
+int	ptr_len(unsigned long long p)
 {
-	int	len;
+	int	i;
 
-	len = 0;
-	while (num != 0)
+	i = 0;
+	while (p)
 	{
-		len++;
-		num = num / 16;
+		p = p / 16;
+		i++;
 	}
-	return (len);
+	return (i);
 }
 
-void	ft_put_ptr(unsigned long num)
+void	write_ptr(unsigned long long p)
 {
-	if (num >= 16)
-	{
-		ft_put_nbr(num / 16);
-		ft_put_nbr(num % 16);
-	}
+	if (p)
+		if ((p / 16) != 0)
+			write_ptr(p / 16);
+	if ((p % 16) < 10)
+		ft_print_char((p % 16) + 48);
 	else
-	{
-		if (num <= 9)
-			ft_is_c(num + '0');
-		else
-			ft_is_c(num - 10 + 'a');
-	}
+		ft_print_char((p % 16) + 87);
 }
 
-int	ft_is_p(unsigned long ptr)
+int	ft_print_ptr(unsigned long long p)
 {
-	int	len;
-
-	len = 0;
-	len += ft_is_s("0x");
-	if (ptr == 0)
-		len += ft_is_c('0');
-	else
+	write(1, "0x", 2);
+	if (!p)
 	{
-		ft_put_nbr(ptr);
-		len += ft_ptr_len(ptr);
+		ft_print_char ('0');
+		return (3);
 	}
-	return (len);
+	else
+		write_ptr (p);
+	return (ptr_len(p) + 2);
 }

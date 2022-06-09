@@ -6,7 +6,7 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 15:39:28 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/06/06 13:24:23 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/06/09 12:25:20 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,18 @@ int	ft_formats(va_list args, const char format)
 
 	print_len = 0;
 	if (format == 'c')
-		print_len += ft_is_c(va_arg(args, int));
-	else if (format == '')
-		print_len += ft_is_s(va_arg(args, char *));
+		print_len += ft_print_char(va_arg(args, int));
+	else if (format == 's')
+		print_len += ft_print_str(va_arg(args, char *));
 	else if (format == 'p')
-		print_len += ft_is_p(va_arg(args, unsigned long long));
+		print_len += ft_print_ptr(va_arg(args, unsigned long long));
 	else if (format == 'd' || format == 'i')
-		print_len += ft_is_d(va_arg(args, int));
+		print_len += ft_print_nbr(va_arg(args, int));
 	else if (format == 'u')
-		print_len += ft_is_u(va_arg(args, unsigned int));
-	else if (format == 'x' || format 'X')
-		print_len += ft_is_x(va_arg(args, unsigned int), format);
+		print_len += ft_print_unsigned_char(va_arg(args, unsigned int));
+	else if (format == 'x' || format == 'X')
+		print_len += ft_print_char_hex(va_arg(args, unsigned int), format);
 	else if (format == '%')
-		print_len += ft_is_per();
+		print_len += ft_print_char('%');
 	return (print_len);
 }
