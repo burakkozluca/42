@@ -6,11 +6,11 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 15:11:55 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/06/09 13:33:57 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/06/09 15:12:03 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../include/ft_printf.h"
 
 int	ft_print_char(int c)
 {
