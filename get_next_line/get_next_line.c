@@ -6,7 +6,7 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/15 11:49:13 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/06/21 15:21:10 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/06/22 09:50:59 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,7 +104,6 @@ char *get_next_line(int fd)
 
 	dizi = (char *)malloc(ft_strlen(dizi));
 	i = 1;
-	j = 0;
 	while (i)
 	{
 		if (buffer_size != 1)
@@ -112,7 +111,8 @@ char *get_next_line(int fd)
 			i += read(fd, s, buffer_size);
 			//printf("%s",s);
 			dizi = ft_strjoin1(dizi, s);
-			if (c == '\n' || c == '\0')
+			i--;
+			if (s[i] == '\n' || s[i] == '\0')
 				break ;
 		}
 		else
@@ -135,9 +135,9 @@ int main()
 	fd = open("oku.txt", 0);
 	printf("%s", get_next_line(fd));
 	printf("\n");
-	printf("%s", get_next_line(fd));
-	printf("%s", get_next_line(fd));
-	printf("%s", get_next_line(fd));
+	// printf("%s", get_next_line(fd));
+	// printf("%s", get_next_line(fd));
+	// printf("%s", get_next_line(fd));
 
 	//get_next_line(fd);
 }
