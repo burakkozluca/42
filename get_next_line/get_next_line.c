@@ -6,26 +6,26 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/15 11:49:13 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/06/28 10:16:52 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/06/28 15:58:13 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strchr(char *s, int c)
 {
 	int	i;
 
 	i = 0;
 	if (!s)
 		return (0);
-	while (s[i])
+	while (s[i] != '\0')
 	{
-		if (s[i] == c)
-			return ((char *)s);
+		if (s[i] == (char)c)
+			return ((char *)(s + i));
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
 //Tüm dosyayı oku sonra her satırı diziye at
 
@@ -99,19 +99,20 @@ char *ft_read(int fd,char *str)
 
 char *ft_one_line(char *str)
 {
-	char 	*one_line;
 	int		i;
-
+	char 	*one_line;
 	//satır uzunluğu bul
 	i = 0;
-	while (str[i] != '\n' && !str[i])
+	if(!str[i])
+		return(NULL);
+	while (str[i] != '\n' && str[i])
 	{
 		i++;
 	}
-	one_line = (char *)malloc(sizeof(char)*(i + 2));
+	one_line = (char *)malloc(sizeof(char) * (i + 2));
 
 	if (!one_line)
-		return (0);
+		return (NULL);
 	//oneline'a satir line ekle
 	i = 0;
 	while (str[i] != '\n' && str[i])
@@ -124,31 +125,32 @@ char *ft_one_line(char *str)
 		one_line[i] = str[i];
 		i++;
 	}
-	str[i] = '\0';
+	one_line[i] = '\0';
 	return(one_line);
 }
 
 char *ft_remain(char *str)
 {
-	int 	i;
+	int 			i;
 	char 	*remain_char;
-	int		j;
+	int				j;
 
 	i = 0;
 	while (str[i] != '\n' && str[i])
 		i++;
-	//str yoksa freele null döndür
 	if(!str[i])
 	{
 		free(str);
 		return(NULL);
 	}
 	remain_char = (char *)malloc(sizeof(char) * (ft_strlen(str) - i));
+	// if(!remain_char)
+	// 	return(NULL);
+	//i++;
 	j = 0;
 	while (str[i])
 	{
 		remain_char[j++] = str[i++];
-		printf("%s",remain_char);
 	}
 	remain_char[j] = '\0';
 	free(str);
@@ -157,14 +159,16 @@ char *ft_remain(char *str)
 
 char *get_next_line(int fd)
 {
-	char	*str;
+	static char	*str;
 	char 	*one_line;
 
 	str = ft_read(fd,str);
+	if(!str)
+		return (NULL);
 	one_line = ft_one_line(str);
 	str = ft_remain(str);
 
-	return (str);
+	return (one_line);
 }
 
 int main()
