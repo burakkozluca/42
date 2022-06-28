@@ -6,7 +6,7 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/15 11:49:13 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/06/23 15:48:09 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/06/28 10:16:52 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -128,61 +128,42 @@ char *ft_one_line(char *str)
 	return(one_line);
 }
 
-// char *ft_remain(char *str)
-// {
-// 	int i;
-// 	char *remain_char;
+char *ft_remain(char *str)
+{
+	int 	i;
+	char 	*remain_char;
+	int		j;
 
-// 	i = 0;
-// 	while (str[i] != '\n' && !str[i])
-// 	{
-
-// 	}
-
-// }
+	i = 0;
+	while (str[i] != '\n' && str[i])
+		i++;
+	//str yoksa freele null döndür
+	if(!str[i])
+	{
+		free(str);
+		return(NULL);
+	}
+	remain_char = (char *)malloc(sizeof(char) * (ft_strlen(str) - i));
+	j = 0;
+	while (str[i])
+	{
+		remain_char[j++] = str[i++];
+		printf("%s",remain_char);
+	}
+	remain_char[j] = '\0';
+	free(str);
+	return(remain_char);
+}
 
 char *get_next_line(int fd)
 {
-	static char	*str;
+	char	*str;
 	char 	*one_line;
 
 	str = ft_read(fd,str);
 	one_line = ft_one_line(str);
+	str = ft_remain(str);
 
-
-	// int		i;
-	// //static char ı ret sonrası \n den sonra tutacak şekilde güncelleyen fonksiyon. yeni değer \n den sonrası
-	// static char	*dizi;// static her çalıştığında yeni linedan başlayarak tutan pointer,
-	// char		*ret;// tüm bilgileri tutan dizi içerisinden line '\n' a kadar dönen arrayi eşitleyip kullanıcıya döndür
-	// char	c;
-	// int 	buffer_size = 2;
-	// char 	*s;
-
-	//dizi = (char *)malloc(ft_strlen(dizi));
-	// s = (char *)malloc(buffer_size + 1);
-	// i = 1;
-	// while (i)
-	// {
-	// 	if (buffer_size != 1)
-	// 	{
-	// 		i = read(fd, s, buffer_size);
-	// 		//printf("%s",s);
-	// 		dizi = ft_strjoin1(dizi, s);
-	// 		free(s);
-	// 		i--;
-	// 		if (s[i] == '\n' || s[i] == '\0')
-	// 			break ;
-	// 	}
-	// 	else
-	// 	{
-	// 		i += read(fd, &c, 1); //karakter karakter okuyor
-	// 		// printf("%c",c);
-	// 		dizi = ft_strjoin(dizi, c); //diziye karakterleri sırayla ekliyor
-	// 		// printf("%s",dizi);
-	// 		if (c == '\n' || c == '\0')
-	// 			break ;
-	// 	}
-	// }
 	return (str);
 }
 
@@ -192,12 +173,7 @@ int main()
 
 	fd = open("oku.txt", 0);
 	printf("%s", get_next_line(fd));
-	//printf("%s", get_next_line(fd));
+	printf("%s", get_next_line(fd));
 	// printf("%s", get_next_line(fd));
 	// printf("%s", get_next_line(fd));
-
-	// int	read;
-	// char *ret;
-
-	//get_next_line(fd);
 }
