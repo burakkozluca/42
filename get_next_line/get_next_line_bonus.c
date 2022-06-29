@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/15 11:49:13 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/06/29 13:06:43 by bkozluca         ###   ########.fr       */
+/*   Created: 2022/06/29 12:05:06 by bkozluca          #+#    #+#             */
+/*   Updated: 2022/06/29 14:15:29 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 char	*ft_read(int fd, char *str)
 {
@@ -94,16 +94,16 @@ char	*ft_remain(char *str)
 
 char	*get_next_line(int fd)
 {
-	static char	*str;
+	static char	*str[4096];
 	char		*one_line;
 
-	str = ft_read(fd, str);
-	if (!str)
+	str[fd] = ft_read(fd, str[fd]);
+	if (!str[fd])
 	{
-		free(str);
+		free(str[fd]);
 		return (NULL);
 	}
-	one_line = ft_one_line(str);
-	str = ft_remain(str);
+	one_line = ft_one_line(str[fd]);
+	str[fd] = ft_remain(str[fd]);
 	return (one_line);
 }
