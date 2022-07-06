@@ -6,16 +6,16 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 12:05:06 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/06/29 14:15:29 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/07/06 10:35:37 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line_bonus.h"
 
-char	*ft_read(int fd, char *str)
+static char	*ft_read(int fd, char *str)
 {
-	int			i;
-	char		*ret;
+	int		i;
+	char	*ret;
 
 	i = 1;
 	ret = (char *)malloc(BUFFERSIZE + 1);
@@ -24,19 +24,19 @@ char	*ft_read(int fd, char *str)
 	while (i && !ft_strchr(str, '\n'))
 	{
 		i = read(fd, ret, BUFFERSIZE);
-		ret[i] = '\0';
 		if (i == -1)
 		{
 			free(ret);
 			return (NULL);
 		}
+		ret[i] = '\0';
 		str = ft_strjoin(str, ret);
 	}
 	free(ret);
 	return (str);
 }
 
-char	*ft_one_line(char *str)
+static char	*ft_one_line(char *str)
 {
 	int		i;
 	char	*one_line;
@@ -64,7 +64,7 @@ char	*ft_one_line(char *str)
 	return (one_line);
 }
 
-char	*ft_remain(char *str)
+static char	*ft_remain(char *str)
 {
 	int		i;
 	char	*remain_char;
@@ -97,13 +97,14 @@ char	*get_next_line(int fd)
 	static char	*str[4096];
 	char		*one_line;
 
-	str[fd] = ft_read(fd, str[fd]);
-	if (!str[fd])
-	{
-		free(str[fd]);
+	if (fd < 0 || BUFFERSIZE <= 0)
 		return (NULL);
+	str[fd] = ft_read(fd, str[fd]);
+	if (str[fd])
+	{
+		one_line = ft_one_line(str[fd]);
+		str[fd] = ft_remain(str[fd]);
+		return (one_line);
 	}
-	one_line = ft_one_line(str[fd]);
-	str[fd] = ft_remain(str[fd]);
-	return (one_line);
+	return (NULL);
 }

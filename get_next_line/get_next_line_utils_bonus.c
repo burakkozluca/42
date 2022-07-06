@@ -6,7 +6,7 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 12:10:38 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/06/29 13:06:31 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/07/05 10:55:18 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ char	*ft_strjoin(char *s1, char *s2)
 	char	*ptr_str;
 	int		i;
 	int		j;
+	int		len;
 
 	if (!s1)
 	{
@@ -53,7 +54,8 @@ char	*ft_strjoin(char *s1, char *s2)
 	}
 	if (!s2)
 		return (0);
-	ptr_str = (char *)malloc((ft_strlen(s1) + ft_strlen(s2)) + 1);
+	len = ft_strlen(s1) + ft_strlen(s2);
+	ptr_str = (char *)malloc(sizeof(char) * (len + 1));
 	if (!ptr_str)
 		return (NULL);
 	i = -1;

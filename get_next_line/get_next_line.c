@@ -6,13 +6,13 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/15 11:49:13 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/06/29 13:06:43 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/07/06 10:35:41 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-char	*ft_read(int fd, char *str)
+static char	*ft_read(int fd, char *str)
 {
 	int			i;
 	char		*ret;
@@ -36,7 +36,7 @@ char	*ft_read(int fd, char *str)
 	return (str);
 }
 
-char	*ft_one_line(char *str)
+static char	*ft_one_line(char *str)
 {
 	int		i;
 	char	*one_line;
@@ -64,7 +64,7 @@ char	*ft_one_line(char *str)
 	return (one_line);
 }
 
-char	*ft_remain(char *str)
+static char	*ft_remain(char *str)
 {
 	int		i;
 	char	*remain_char;

@@ -6,7 +6,7 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 12:05:28 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/06/29 12:13:07 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/07/05 10:51:04 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # include <stdlib.h>
 
 # ifndef BUFFERSIZE
-#  define BUFFERSIZE 1
+#  define BUFFERSIZE 2
 # endif
 
 char	*get_next_line(int fd);
