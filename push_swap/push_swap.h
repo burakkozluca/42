@@ -6,7 +6,7 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 16:19:24 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/08/17 18:17:05 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/08/18 13:44:41 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define PUSH_SWAP_H
 
 # include <stdio.h>
+# include <unistd.h>
+# include <stdlib.h>
 
 typedef struct s_list
 {
@@ -24,4 +26,5 @@ typedef struct s_list
 
 //UTILS
 t_stack	*ft_lstlast(t_stack *lst);
+void	lstlastprev(t_stack **stack);
 #endif

@@ -6,7 +6,7 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 18:10:05 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/08/17 18:16:24 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/08/18 13:59:14 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,4 +43,16 @@ void	rr(a_stack **a, b_stack **b)
 	a_last->next = a_tmp;
 	a_tmp->next = NULL;
 	write(1, "rr\n", 3);
+}
+
+void	rra(a_stack **a)
+{
+	a_stack	*last;
+
+	last = ft_lstlast(*a);
+	lstlastprev(a);
+	last->next = *a;
+	*a = last;
+	(*a)->next = NULL;
+	write(1, "rra\n", 4);
 }
