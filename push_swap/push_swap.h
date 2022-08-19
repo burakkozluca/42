@@ -6,7 +6,7 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 16:19:24 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/08/18 13:44:41 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/08/19 15:55:54 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ typedef struct s_list
 {
 	int				content;
 	struct s_list	*next;
+	int				rank;
 } a_stack,	b_stack,	t_stack;
 
 

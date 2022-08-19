@@ -6,7 +6,7 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 12:19:33 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/08/18 15:56:22 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/08/19 15:55:56 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,16 @@ void	lstlastprev(t_stack **stack)
 
 	gec = (*stack);
 	while (gec->next->next != NULL)
+		gec = gec->next;
+	gec->next = NULL;
+}
+
+void	geclst(t_stack **stack)
+{
+	t_stack	*gec;
+
+	gec = (*stack);
+	while (gec->next != NULL)
 		gec = gec->next;
 	gec->next = NULL;
 }
@@ -55,15 +65,17 @@ void	rra(a_stack **a)
 	write(1, "rra\n", 4);
 }
 
-void	rrb(b_stack **b)
+void	ra(a_stack **a)
 {
-	b_stack	*last;
+	a_stack	*tmp;
+	a_stack	*last;
 
-	last = ft_lstlast(*b);
-	lstlastprev(b);
-	last->next = (*b);
-	(*b) = last;
-	write(1, "rrb\n", 4);
+	last = ft_lstlast(*a);
+	tmp = *a;
+	*a = (*a)->next;
+	last->next = tmp;
+	tmp->next = NULL;
+	write(1, "ra\n", 3);
 }
 
 void	rrr(a_stack **a, b_stack **b)
@@ -83,23 +95,32 @@ void	rrr(a_stack **a, b_stack **b)
 	(*b) = b_last;
 	write(1, "rrr\n", 4);
 }
-void	ra(a_stack **a)
-{
-	a_stack	*tmp;
-	a_stack	*last;
 
-	last = ft_lstlast(*a);
-	tmp = *a;
-	*a = (*a)->next;
-	last->next = tmp;
-	tmp->next = NULL;
-	write(1, "ra\n", 3);
+void	rrb(b_stack **b)
+{
+	b_stack	*last;
+
+	last = ft_lstlast(*b);
+	lstlastprev(b);
+	last->next = (*b);
+	(*b) = last;
+	write(1, "rrb\n", 4);
 }
+
 void	pa(a_stack **a, b_stack **b)
 {
-	a_stack *a;
-	b_stack *b;
+	a_stack *last;
+	b_stack *first;
 
+	last = ft_lstlast(*a);
+	geclst(a);
+	first = (*b)->content;
+
+	write(1, "pa\n", 3);
+	// last = ft_lstlast(*a); //son eleman lasta yazıldı.
+	// lstlastprev(a); //son elemana null yazıldı.
+	// last->next = (*a); //last'ın nextine stack a yazıldı.
+	// last = ft_lstlast(*a);
 
 }
 
@@ -125,7 +146,7 @@ int	main(int argc, char **argv)
 	b->next->next = (b_stack *)malloc(sizeof(struct s_list));
 	b->next->next->content = 3;
 	b->next->next->next = (b_stack *)malloc(sizeof(struct s_list));
-	b->next->next->next->content = 4;
+	b->next->next->next->content = 5;
 	b->next->next->next->next = NULL;
 
 	printf("a stack\n");
@@ -133,9 +154,10 @@ int	main(int argc, char **argv)
 	printf("\nb stack\n");
 	printlist(b);
 	printf("\n-------------\n");
-	rrr(&a,&b);
+	pa(&a,&b);
+	//rrb(&b);
 	printlist(a);
 	printf("\n");
-	rrr(&a,&b);
+	//rrr(&a,&b);
 	printlist(b);
 }
