@@ -8,7 +8,7 @@
 |   2    | [**get_next_line**](./get_next_line) |    C     | `static variable` `file descriptor`              |   current    |
 |        | [**ft_printf**](./ft_printf)         |    C     | `variadic arguments` `UTF-8` `bitwise operation` |   11/06/2022   |
 |        | [**Born2beroot**](./Born2beroot)             |    -     | `network` `OSI protocols` `TCP/IP`               |  1/08/2022    |
-|   3    | [**Minitalk**](./Minitalk)         |    Go    | `docker` `immutable infrastructure` `server`     |   2020. 08. 23.    |
+|   3    | [**Minitalk**](./minitalk)         |    C    | `docker` `immutable infrastructure` `server`     |   2020. 08. 23.    |
 <!--|        | [**cub3d**](./3_cub3d)                 |    C     | `raycasting` `graphic design` `algorithm`        |   2020. 11. 10.    |-->
 <!--|   4    | [**libasm**](./4_libasm)               |   ASM    | `assembly language` `computer architecture`      |   2020. 12. 22.    |-->
 <!--|        | [**minishell**](./4_minishell)         |    C     |                                                  |       closed       |-->
