@@ -9,7 +9,7 @@
 |        | [**ft_printf**](./ft_printf)         |    C     | `variadic arguments` `UTF-8` `bitwise operation` |   11/06/2022   |
 |        | [**Born2beroot**](./Born2beroot)             |    -     | `network` `OSI protocols` `TCP/IP`               |  1/08/2022    |
 |   3    | [**Minitalk**](./minitalk)         |    C    | `UNIX` `client` `memory leaks` `server`     |   11/08/2022    |
-|        | [**Push_Swap**](./push_swap)                 |    C     | `raycasting` `graphic design` `algorithm`        |   2020. 11. 10.    |
+|        | [**Push_Swap**](./push_swap)                 |    C     | `raycasting` `graphic design` `algorithm`        |   current    |
 <!--|   4    | [**libasm**](./4_libasm)               |   ASM    | `assembly language` `computer architecture`      |   2020. 12. 22.    |-->
 <!--|        | [**minishell**](./4_minishell)         |    C     |                                                  |       closed       |-->
 <!--|        | [**ft_services**](./4_ft_services)     |          |                                                  |       closed       |-->
