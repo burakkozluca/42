@@ -5,7 +5,7 @@
 | Circle | Project                                | Language | Topics                                           | Date of Completion |
 | :----: | :------------------------------------- | :------: | :----------------------------------------------- | :----------------: |
 |   1    | [**Libft**](./Libft)                   |    C     | `library` `Makefile` `linked list`               |   17/03/2022    |
-|   2    | [**get_next_line**](./get_next_line) |    C     | `static variable` `file descriptor`              |   1/06/2022    |
+|   2    | [**get_next_line**](./get_next_line) |    C     | `static variable` `file descriptor`              |   22/07/2022    |
 |        | [**ft_printf**](./ft_printf)         |    C     | `variadic arguments` `UTF-8` `bitwise operation` |   11/06/2022   |
 |        | [**Born2beroot**](./Born2beroot)             |    -     | `network` `OSI protocols` `TCP/IP`               |  1/08/2022    |
 |   3    | [**Minitalk**](./minitalk)         |    C    | `UNIX` `client` `memory leaks` `server`     |   11/08/2022    |
