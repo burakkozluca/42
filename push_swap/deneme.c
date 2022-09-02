@@ -6,7 +6,7 @@
 /*   By: burakkozluca <burakkozluca@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 12:19:33 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/09/02 16:20:17 by burakkozluc      ###   ########.fr       */
+/*   Updated: 2022/09/02 16:22:49 by burakkozluc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -161,4 +161,5 @@ int	main(int argc, char **argv)
 	//rrr(&a,&b);
 	printlist(b);
 	printf("deneme");
+	printf("denem2");
 }
