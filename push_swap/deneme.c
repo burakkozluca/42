@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   deneme.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
+/*   By: burakkozluca <burakkozluca@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 12:19:33 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/08/19 15:55:56 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/09/02 16:20:17 by burakkozluc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -160,4 +160,5 @@ int	main(int argc, char **argv)
 	printf("\n");
 	//rrr(&a,&b);
 	printlist(b);
+	printf("deneme");
 }
