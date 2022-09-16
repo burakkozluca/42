@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   deneme.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: burakkozluca <burakkozluca@student.42.f    +#+  +:+       +#+        */
+/*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 12:19:33 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/09/02 16:27:13 by burakkozluc      ###   ########.fr       */
+/*   Updated: 2022/08/24 14:40:28 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,19 +109,24 @@ void	rrb(b_stack **b)
 
 void	pa(a_stack **a, b_stack **b)
 {
-	a_stack *last;
-	b_stack *first;
+	b_stack *temp;
 
-	last = ft_lstlast(*a);
-	geclst(a);
-	first = (*b)->content;
-
+	temp = (*b)->next;
+	(*b)->next = (*a);
+	*a = *b;
+	*b = temp;
 	write(1, "pa\n", 3);
-	// last = ft_lstlast(*a); //son eleman lasta yazıldı.
-	// lstlastprev(a); //son elemana null yazıldı.
-	// last->next = (*a); //last'ın nextine stack a yazıldı.
-	// last = ft_lstlast(*a);
+}
 
+void	pb(b_stack **b, a_stack **a)
+{
+	a_stack *temp;
+
+	temp = (*a)->next;
+	(*a)->next = (*b);
+	*b = *a;
+	*a = temp;
+	write(1, "pb\n", 3);
 }
 
 int	main(int argc, char **argv)
@@ -153,14 +158,11 @@ int	main(int argc, char **argv)
 	printlist(a);
 	printf("\nb stack\n");
 	printlist(b);
+
 	printf("\n-------------\n");
-	pa(&a,&b);
-	//rrb(&b);
+
+	pb(&b,&a);
 	printlist(a);
 	printf("\n");
-	//rrr(&a,&b);
 	printlist(b);
-	printf("deneme");
-	printf("denem2");
-	printf("burak");
 }

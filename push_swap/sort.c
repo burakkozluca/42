@@ -1,37 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   sort.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/17 16:19:28 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/08/27 17:56:21 by bkozluca         ###   ########.fr       */
+/*   Created: 2022/08/24 16:30:11 by bkozluca          #+#    #+#             */
+/*   Updated: 2022/08/27 16:14:07 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_stack* sort()
+int	ft_strlen(char *str)
 {
-
-}
-
-t_stack* push_swap()
-{
-
-}
-int	main(int argc, char **argv)
-{
-	a_stack *a;
-	b_stack *b;
-	int		i;
-	int		flag;
+	int	i;
 
 	i = 0;
-	flag = 0;
-	//eksi değer kontrolü
-	a = to_int(argv, argc);
-	b = NULL;
-	if (a = NULL || )
+	while (*str++ != NULL)
+		i++;
+	return (i);
+}
+
+void	pivot(t_stack **t, int max, int min)
+{
+	int	i;
+
+	i = 0;
 }

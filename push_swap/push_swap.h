@@ -6,7 +6,7 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 16:19:24 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/08/19 15:55:54 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/08/27 17:07:43 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,7 @@ typedef struct s_list
 //UTILS
 t_stack	*ft_lstlast(t_stack *lst);
 void	lstlastprev(t_stack **stack);
+
+void	push(t_stack **stack, int data);
+t_stack	*to_int(char **str, int ac);
 #endif
