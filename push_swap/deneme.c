@@ -6,7 +6,7 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 12:19:33 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/08/24 14:40:28 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/09/19 17:15:23 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void	geclst(t_stack **stack)
 
 void	printlist(struct s_list *a)
 {
-	a_stack	*temp;
+	t_stack	*temp;
 
 	temp = a;
 	while (temp != NULL)
@@ -54,9 +54,9 @@ void	printlist(struct s_list *a)
 	temp = NULL;
 }
 
-void	rra(a_stack **a)
+void	rra(t_stack **a)
 {
-	a_stack	*last;
+	t_stack	*last;
 
 	last = ft_lstlast(*a);
 	lstlastprev(a);
@@ -65,10 +65,10 @@ void	rra(a_stack **a)
 	write(1, "rra\n", 4);
 }
 
-void	ra(a_stack **a)
+void	ra(t_stack **a)
 {
-	a_stack	*tmp;
-	a_stack	*last;
+	t_stack	*tmp;
+	t_stack	*last;
 
 	last = ft_lstlast(*a);
 	tmp = *a;
@@ -78,10 +78,10 @@ void	ra(a_stack **a)
 	write(1, "ra\n", 3);
 }
 
-void	rrr(a_stack **a, b_stack **b)
+void	rrr(t_stack **a, t_stack **b)
 {
-	a_stack	*a_last;
-	b_stack	*b_last;
+	t_stack	*a_last;
+	t_stack	*b_last;
 
 	a_last = ft_lstlast(*a);
 	b_last = ft_lstlast(*b);
@@ -96,9 +96,9 @@ void	rrr(a_stack **a, b_stack **b)
 	write(1, "rrr\n", 4);
 }
 
-void	rrb(b_stack **b)
+void	rrb(t_stack **b)
 {
-	b_stack	*last;
+	t_stack	*last;
 
 	last = ft_lstlast(*b);
 	lstlastprev(b);
@@ -107,9 +107,9 @@ void	rrb(b_stack **b)
 	write(1, "rrb\n", 4);
 }
 
-void	pa(a_stack **a, b_stack **b)
+void	pa(t_stack **a, t_stack **b)
 {
-	b_stack *temp;
+	t_stack *temp;
 
 	temp = (*b)->next;
 	(*b)->next = (*a);
@@ -118,9 +118,9 @@ void	pa(a_stack **a, b_stack **b)
 	write(1, "pa\n", 3);
 }
 
-void	pb(b_stack **b, a_stack **a)
+void	pb(t_stack **b, t_stack **a)
 {
-	a_stack *temp;
+	t_stack *temp;
 
 	temp = (*a)->next;
 	(*a)->next = (*b);
@@ -131,26 +131,26 @@ void	pb(b_stack **b, a_stack **a)
 
 int	main(int argc, char **argv)
 {
-	a_stack	*a;
-	b_stack *b;
+	t_stack	*a;
+	t_stack *b;
 
-	a = (a_stack *)malloc(sizeof(struct s_list));
+	a = (t_stack *)malloc(sizeof(struct s_list));
 	a->content = 1;
-	a->next = (a_stack *)malloc(sizeof(struct s_list));
+	a->next = (t_stack *)malloc(sizeof(struct s_list));
 	a->next->content = 2;
-	a->next->next = (a_stack *)malloc(sizeof(struct s_list));
+	a->next->next = (t_stack *)malloc(sizeof(struct s_list));
 	a->next->next->content = 3;
-	a->next->next->next = (a_stack *)malloc(sizeof(struct s_list));
+	a->next->next->next = (t_stack *)malloc(sizeof(struct s_list));
 	a->next->next->next->content = 4;
 	a->next->next->next->next = NULL;
 
-	b = (b_stack *)malloc(sizeof(struct s_list));
+	b = (t_stack *)malloc(sizeof(struct s_list));
 	b->content = 1;
-	b->next = (b_stack *)malloc(sizeof(struct s_list));
+	b->next = (t_stack *)malloc(sizeof(struct s_list));
 	b->next->content = 2;
-	b->next->next = (b_stack *)malloc(sizeof(struct s_list));
+	b->next->next = (t_stack *)malloc(sizeof(struct s_list));
 	b->next->next->content = 3;
-	b->next->next->next = (b_stack *)malloc(sizeof(struct s_list));
+	b->next->next->next = (t_stack *)malloc(sizeof(struct s_list));
 	b->next->next->next->content = 5;
 	b->next->next->next->next = NULL;
 

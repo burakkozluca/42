@@ -6,7 +6,7 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 16:24:57 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/08/17 18:16:52 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/09/19 17:15:19 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,29 +21,29 @@ void	*swap(int *a, int *b)
 	*b = temp;
 }
 
-void	sa(a_stack *a)
+void	sa(t_stack *a)
 {
 	swap(&a->content, &a->next->content);
 	write(1, "sa\n", 3);
 }
 
-void	sb(b_stack *b)
+void	sb(t_stack *b)
 {
 	swap(&b->content, &b->next->content);
 	write(1, "sb\n", 3);
 }
 
-void	ss(a_stack *a, b_stack *b)
+void	ss(t_stack *a, t_stack *b)
 {
 	sa(a);
 	sb(b);
 	write(1, "ss\n", 3);
 }
 
-void	ra(a_stack **a)
+void	ra(t_stack **a)
 {
-	a_stack	*tmp;
-	a_stack	*last;
+	t_stack	*tmp;
+	t_stack	*last;
 
 	last = ft_lstlast(*a);
 	tmp = *a;

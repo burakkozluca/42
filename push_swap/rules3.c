@@ -6,15 +6,15 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 14:40:49 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/08/27 16:10:18 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/09/19 17:15:31 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	rrb(b_stack **b)
+void	rrb(t_stack **b)
 {
-	b_stack	*last;
+	t_stack	*last;
 
 	last = ft_lstlast(*b);
 	lstlastprev(b);
@@ -23,10 +23,10 @@ void	rrb(b_stack **b)
 	write(1, "rrb\n", 4);
 }
 
-void	rrr(a_stack **a, b_stack **b)
+void	rrr(t_stack **a, t_stack **b)
 {
-	a_stack	*a_last;
-	b_stack	*b_last;
+	t_stack	*a_last;
+	t_stack	*b_last;
 
 	a_last = ft_lstlast(*a);
 	b_last = ft_lstlast(*b);
@@ -39,9 +39,9 @@ void	rrr(a_stack **a, b_stack **b)
 	write(1, "rrr\n", 4);
 }
 
-void	pa(a_stack **a, b_stack **b)
+void	pa(t_stack **a, t_stack **b)
 {
-	b_stack	*temp;
+	t_stack	*temp;
 
 	temp = (*b)->next;
 	(*b)->next = (*a);
@@ -50,9 +50,9 @@ void	pa(a_stack **a, b_stack **b)
 	write(1, "pa\n", 3);
 }
 
-void	pb(b_stack **b, a_stack **a)
+void	pb(t_stack **b, t_stack **a)
 {
-	a_stack	*temp;
+	t_stack	*temp;
 
 	temp = (*a)->next;
 	(*a)->next = (*b);

@@ -6,16 +6,16 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 18:10:05 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/08/18 13:59:14 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/09/19 17:15:25 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	rb(b_stack **b)
+void	rb(t_stack **b)
 {
-	b_stack	*tmp;
-	b_stack	*last;
+	t_stack	*tmp;
+	t_stack	*last;
 
 	last = ft_lstlast(*b);
 	tmp = *b;
@@ -25,12 +25,12 @@ void	rb(b_stack **b)
 	write(1, "rb\n", 3);
 }
 
-void	rr(a_stack **a, b_stack **b)
+void	rr(t_stack **a, t_stack **b)
 {
-	b_stack	*b_tmp;
-	a_stack	*a_tmp;
-	b_stack	*b_last;
-	a_stack	*a_last;
+	t_stack	*b_tmp;
+	t_stack	*a_tmp;
+	t_stack	*b_last;
+	t_stack	*a_last;
 
 	b_last = ft_lstlast(*b);
 	b_tmp = *b;
@@ -45,9 +45,9 @@ void	rr(a_stack **a, b_stack **b)
 	write(1, "rr\n", 3);
 }
 
-void	rra(a_stack **a)
+void	rra(t_stack **a)
 {
-	a_stack	*last;
+	t_stack	*last;
 
 	last = ft_lstlast(*a);
 	lstlastprev(a);
