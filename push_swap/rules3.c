@@ -6,7 +6,7 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 14:40:49 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/09/19 17:15:31 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/09/20 17:10:18 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ void	push(t_stack **stack, int data)
 
 	tmp = (t_stack *)malloc(sizeof(t_stack));
 	if (!tmp)
-		return (0);
+		return ;
 	tmp->content = data;
 	tmp->next = NULL;
 	if (!stack)

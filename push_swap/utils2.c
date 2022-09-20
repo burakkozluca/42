@@ -6,7 +6,7 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 14:51:01 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/09/19 17:15:30 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/09/20 17:10:23 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,27 @@ int	ft_lstmin(t_stack *a)
 	while (a)
 	{
 		if (a->content < min)
-			smin = a->content;
+			min = a->content;
 		a = a->next;
 	}
 	return (min);
+}
+
+int	ft_lstmin_pos(t_stack *a)
+{
+	int	min;
+	int	i;
+
+	i = 0;
+	min = a->content;
+	while (a)
+	{
+		if (a->content < min)
+			min = a->content;
+		a = a->next;
+		i++;
+	}
+	return (i);
 }
 
 int	ft_lstmax(t_stack *a)
@@ -53,4 +70,17 @@ int	ft_lstmax(t_stack *a)
 		a = a->next;
 	}
 	return (max);
+}
+
+void	printlist(struct s_list *a)
+{
+	t_stack	*temp;
+
+	temp = a;
+	while (temp != NULL)
+	{
+		printf("%d ", temp->content);
+		temp = temp->next;
+	}
+	temp = NULL;
 }
