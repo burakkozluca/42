@@ -6,7 +6,7 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 17:43:43 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/09/20 17:10:35 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/09/21 16:19:12 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 t_stack	*ft_lstlast(t_stack *lst)
 {
 	if (!lst)
-		return ;
+		return (0);
 	while (lst->next != 0)
 		lst = lst->next;
 	return (lst);

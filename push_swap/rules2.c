@@ -6,16 +6,16 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 18:10:05 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/09/20 17:10:20 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/09/21 16:37:38 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	rb(t_stack **b)
+void	rb(b_stack **b)
 {
-	t_stack	*tmp;
-	t_stack	*last;
+	b_stack	*tmp;
+	b_stack	*last;
 
 	last = ft_lstlast(*b);
 	tmp = *b;
@@ -25,12 +25,12 @@ void	rb(t_stack **b)
 	write(1, "rb\n", 3);
 }
 
-void	rr(t_stack **a, t_stack **b)
+void	rr(a_stack **a, b_stack **b)
 {
-	t_stack	*b_tmp;
-	t_stack	*a_tmp;
-	t_stack	*b_last;
-	t_stack	*a_last;
+	b_stack	*b_tmp;
+	a_stack	*a_tmp;
+	b_stack	*b_last;
+	a_stack	*a_last;
 
 	b_last = ft_lstlast(*b);
 	b_tmp = *b;
@@ -45,9 +45,9 @@ void	rr(t_stack **a, t_stack **b)
 	write(1, "rr\n", 3);
 }
 
-void	rra(t_stack **a)
+void	rra(a_stack **a)
 {
-	t_stack	*last;
+	a_stack	*last;
 
 	last = ft_lstlast(*a);
 	lstlastprev(a);
@@ -55,4 +55,22 @@ void	rra(t_stack **a)
 	*a = last;
 	(*a)->next = NULL;
 	write(1, "rra\n", 4);
+}
+
+void	push(t_stack **stack, int data)
+{
+	t_stack	*temp;
+
+	temp = (t_stack *)malloc(sizeof(t_stack));
+	if (!temp)
+		return ;
+	temp->content = data;
+	temp->next = NULL;
+	if (!stack)
+	{
+		(*stack) = temp;
+		return ;
+	}
+	temp->next = (*stack);
+	(*stack) = temp;
 }

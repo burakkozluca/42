@@ -6,7 +6,7 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 14:51:01 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/09/20 17:10:23 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/09/21 17:10:19 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,17 +43,23 @@ int	ft_lstmin(t_stack *a)
 
 int	ft_lstmin_pos(t_stack *a)
 {
-	int	min;
-	int	i;
+	int		i;
+	int		data;
+	t_stack	*temp;
 
+	temp = a;
+	data = temp->content;
 	i = 0;
-	min = a->content;
-	while (a)
+	while (a != NULL)
 	{
-		if (a->content < min)
-			min = a->content;
-		a = a->next;
-		i++;
+		if (data <= a->content && a != NULL)
+			a = a->next;
+		else
+		{
+			temp = temp->next;
+			data = temp->content;
+			i++;
+		}
 	}
 	return (i);
 }
