@@ -6,7 +6,7 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 14:51:01 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/09/21 17:10:19 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/09/22 17:24:58 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,9 @@ int	ft_lstsize(t_stack *lst)
 
 	temp = lst;
 	i = 0;
-	while (temp != NULL)
+	while (temp->next != NULL)
 	{
+		//printf("Burdasın -->|%d\n", __LINE__);
 		i++;
 		temp = temp->next;
 	}
@@ -78,15 +79,25 @@ int	ft_lstmax(t_stack *a)
 	return (max);
 }
 
-void	printlist(struct s_list *a)
+int	ft_lstmax_pos(t_stack *stack)
 {
+	int		i;
+	int		data;
 	t_stack	*temp;
 
-	temp = a;
-	while (temp != NULL)
+	temp = stack;
+	data = temp->content;
+	i = 0;
+	while (stack != NULL)
 	{
-		printf("%d ", temp->content);
-		temp = temp->next;
+		if (data >= stack->content && stack != NULL)
+			stack = stack->next;
+		else
+		{
+			temp = temp->next;
+			data = temp->content;
+			i++;
+		}
 	}
-	temp = NULL;
+	return (i);
 }

@@ -6,7 +6,7 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 16:19:28 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/09/21 17:19:13 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/09/22 16:26:00 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ t_stack	*push_swap(char **str, int len)
 		sort_three(&a_stack);
 	else if (ft_lstsize(a_stack) <= 5 && !is_sorted(a_stack))
 		sort_five(&a_stack, &b_stack);
+	sort_big(&a_stack);
 	free(b_stack);
 	return (a_stack);
 }
@@ -37,9 +38,20 @@ int	main(int argc, char **argv)
 {
 	t_stack	*stack;
 
-	if (argc > 1)
+	stack = (t_stack *)malloc(sizeof(t_stack));
+	if (!stack)
 	{
-		stack = (t_stack *)malloc(sizeof(t_stack));
+		write(2, "Error\n", 6);
+		exit(EXIT_FAILURE);
+	}
+	if (!is_number(argv, argc))
+	{
+		write(2, "Error\n", 6);
+		free(stack);
+		exit(EXIT_FAILURE);
+	}
+	else if (argc > 1)
+	{
 		stack = push_swap(argv, argc);
 		free(stack);
 		exit(EXIT_SUCCESS);

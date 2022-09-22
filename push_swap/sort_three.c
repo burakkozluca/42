@@ -6,7 +6,7 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 16:17:44 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/09/21 16:33:21 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/09/22 17:26:49 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ void	sort_three(t_stack **a)
 	int	min;
 
 	min = ft_lstmin(*a);
+	printf("Burdasın -->|%d\n", __LINE__);
 	if ((*a)->next->content == ft_lstmax(*a) && (*a)->content != min)
 		rra(a);
 	else if ((*a)->next->content == ft_lstmax(*a) && (*a)->content == min)
