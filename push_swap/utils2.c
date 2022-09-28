@@ -6,7 +6,7 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 14:51:01 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/09/22 17:24:58 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/09/28 14:35:24 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,8 @@ int	ft_lstsize(t_stack *lst)
 
 	temp = lst;
 	i = 0;
-	while (temp->next != NULL)
+	while (temp != NULL)
 	{
-		//printf("Burdasın -->|%d\n", __LINE__);
 		i++;
 		temp = temp->next;
 	}

@@ -6,7 +6,7 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 18:10:05 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/09/21 16:37:38 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/09/23 17:02:53 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,15 +45,24 @@ void	rr(a_stack **a, b_stack **b)
 	write(1, "rr\n", 3);
 }
 
+void	pop(t_stack **stack)
+{
+	t_stack	*iter;
+
+	iter = (*stack);
+	while (iter->next->next != NULL)
+		iter = iter->next;
+	iter->next = NULL;
+}
+
 void	rra(a_stack **a)
 {
-	a_stack	*last;
+	a_stack	*first;
 
-	last = ft_lstlast(*a);
-	lstlastprev(a);
-	last->next = *a;
-	*a = last;
-	(*a)->next = NULL;
+	first = ft_lstlast(*a);
+	pop(a);
+	first->next = (*a);
+	(*a) = first;
 	write(1, "rra\n", 4);
 }
 

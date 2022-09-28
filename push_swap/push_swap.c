@@ -6,7 +6,7 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 16:19:28 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/09/22 16:26:00 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/09/28 16:37:24 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,9 @@ t_stack	*push_swap(char **str, int len)
 		sort_three(&a_stack);
 	else if (ft_lstsize(a_stack) <= 5 && !is_sorted(a_stack))
 		sort_five(&a_stack, &b_stack);
-	sort_big(&a_stack);
+	else
+		sort_big(&a_stack);
+	printlist(a_stack);
 	free(b_stack);
 	return (a_stack);
 }

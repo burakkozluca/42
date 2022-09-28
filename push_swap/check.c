@@ -6,7 +6,7 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 16:36:47 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/09/22 16:26:27 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/09/28 14:23:12 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,8 +76,8 @@ int	is_number(char **str, int argc)
 				k = 0;
 			while ((str[i][j] == '-' || str[i][j] == '+') && ++j)
 				k++;
-			if (((str[i][j] != '-') && (str[i][j] < '0' || str[i][j] > '9')
-					&& (str[i][j] != 32 && str[i][j] != '\t')) || k > 1)
+			if ((str[i][j] < '0' || str[i][j] > '9')
+					&& ((str[i][j] != 32 && str[i][j] != '\t') || (k > 1)))
 				return (0);
 			j++;
 		}

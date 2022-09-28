@@ -6,7 +6,7 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 14:40:49 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/09/22 17:22:47 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/09/23 16:13:08 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,9 @@ void	rrr(a_stack **a, b_stack **b)
 	write(1, "rrr\n", 4);
 }
 
-void	pa(a_stack **a, b_stack **b)
+void	pa(t_stack **a, t_stack **b)
 {
-	b_stack	*temp;
+	t_stack	*temp;
 
 	temp = (*b)->next;
 	(*b)->next = (*a);
@@ -50,9 +50,9 @@ void	pa(a_stack **a, b_stack **b)
 	write(1, "pa\n", 3);
 }
 
-void	pb(b_stack **b, a_stack **a)
+void	pb(t_stack **b, t_stack **a)
 {
-	a_stack	*temp;
+	t_stack	*temp;
 
 	temp = (*a)->next;
 	(*a)->next = (*b);
