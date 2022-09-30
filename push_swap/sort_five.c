@@ -6,7 +6,7 @@
 /*   By: bkozluca <bkozluca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 13:46:43 by bkozluca          #+#    #+#             */
-/*   Updated: 2022/09/28 15:47:30 by bkozluca         ###   ########.fr       */
+/*   Updated: 2022/09/30 17:57:30 by bkozluca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ void	pb_five(t_stack **a_stack, t_stack **b_stack)
 	while (3 < ft_lstsize(*a_stack))
 	{
 		index = ft_lstmin_pos(*a_stack);
-		if (index != 0 && index < ft_lstsize(*a_stack) / 2)
+		if (index != 0 && index <= ft_lstsize(*a_stack) / 2)
 			ra(a_stack);
-		else if (index >= ft_lstsize(*a_stack) / 2)
+		else if (index > ft_lstsize(*a_stack) / 2)
 			rra(a_stack);
 		else if (!index)
 			pb(b_stack, a_stack);
