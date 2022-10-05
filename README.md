@@ -9,8 +9,8 @@
 |        | [**ft_printf**](./ft_printf)         |    C     | `variadic arguments` `UTF-8` `bitwise operation` |   11/06/2022   |
 |        | [**Born2beroot**](./Born2beroot)             |    -     | `network` `OSI protocols` `TCP/IP`               |  1/08/2022    |
 |   3    | [**Minitalk**](./minitalk)         |    C    | `UNIX` `client` `memory leaks` `server`     |   11/08/2022    |
-|        | [**Push_Swap**](./push_swap)                 |    C     | `data structures and sort algorithms`       |   current    |
-|        | [**So_long**](./so__long)               |    C     | `MiniLibX`      |   2020. 12. 22.    |
+|        | [**Push_Swap**](./push_swap)                 |    C     | `data structures and sort algorithms`       |   1/10/2022    |
+|        | [**So_long**](./so__long)               |    C     | `MiniLibX`      |   current    |
 <!--|   4    | [**minishell**](./4_minishell)         |    C     |                                                  |       closed       |-->
 <!--|        | [**ft_services**](./4_ft_services)     |          |                                                  |       closed       |-->
 <!--|   5    | CPP Module 01-08                       |          |                                                  |       closed       |-->
