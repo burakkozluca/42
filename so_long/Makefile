@@ -1,13 +1,13 @@
 NAME = mlx.a
 SRC = $(wildcard *.c)
-CC = gcc -Wall -Wextra -Werror
+CC = gcc
+CFLAGS = get_next_line/get_next_line.c get_next_line/get_next_line_utils.c -Lmlx -lmlx -framework OpenGL -framework AppKit
 OBJ = $(SRC:.c = .o)
-CFLAGS = -Lmlx -lmlx -framework OpenGL -framework AppKit
 
 all : $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) *.c $(CFLAGS) -o so_long
+	$(CC) -Wall -Wextra -Werror *.c $(CFLAGS) -o so_long
 
 clean:
 	rm -rf so_long
@@ -15,3 +15,4 @@ clean:
 fclean: clean
 
 re: clean fclean all
+
