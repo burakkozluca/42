@@ -2,40 +2,65 @@
 #include <unistd.h>
 #include <limits.h>
 #include <stdio.h>
-char *ft_itoa(int nbr)
+
+static int	ft_strlen(const char *s)
 {
-	int		len;
-	long	n_temp;
-	char	*str;
+	int i;
 
-	len = 0;
-	n_temp = nbr;
-	str[len] = '\0';
+	i = 0;
+	while (s[i])
+		i++;
+	return i;
+}
 
+static char	*ft_strrev(char *str)
+{
+	int i;
+	int j;
+	int tmp;
+
+	i = 0;
+	j = ft_strlen(str);
+	while (j > i)
+	{
+		j--;
+		tmp = str[i];
+		str[i] = str[j];
+		str[j] = tmp;
+		i++;
+	}
+	return str;
+}
+
+char	*ft_itoa(int nbr)
+{
+	int i;
+	int neg;
+	char *tmp;
+
+	i = 0;
+	neg = 0;
+	tmp = malloc(sizeof(char) * 12);
+	if (tmp == NULL || nbr == 0)
+		return ((nbr == 0) ? "0" : NULL);
 	if (nbr == -2147483648)
 		return ("-2147483648");
-	if(!(str = (char *)malloc(sizeof(char) * len + 1)))
-		return (NULL);
-	if (nbr == 0)
-	{
-		str[0] = '0';
-		return (str);
-	}
 	if (nbr < 0)
 	{
-		len += 1;
+		neg = 1;
 		nbr *= -1;
-		str[0] = '-';
-	}
-	while (n_temp)
-	{
-		n_temp /= 10;
-		len += 1;
 	}
 	while (nbr)
 	{
-		str[--len] = (nbr % 10) + '0';
+		tmp[i++] = (nbr % 10) + '0';
 		nbr /= 10;
 	}
-	return (str);
+	if (neg)
+		tmp[i] = '-';
+	return ft_strrev(tmp);
+}
+
+int main()
+{
+	printf("%s",ft_itoa(101));
 }

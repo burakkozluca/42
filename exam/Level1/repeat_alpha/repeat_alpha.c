@@ -26,7 +26,7 @@ int main(int argc,char **argv)
             {
                 write(1, &argv[1][i], 1);
                 repeat--;
-            } 
+            }
             i++;
         }
     }
