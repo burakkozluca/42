@@ -62,5 +62,5 @@ char	*ft_itoa(int nbr)
 
 int main()
 {
-	printf("%s",ft_itoa(101));
+	printf("%s",ft_itoa(199));
 }

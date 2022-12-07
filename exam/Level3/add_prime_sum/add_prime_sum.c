@@ -7,7 +7,7 @@ void	ft_putchar(char c)
 
 void	ft_putnbr(int n)
 {
-	if(n > 9)
+	if (n > 9)
 		ft_putnbr(n / 10);
 	ft_putchar(n % 10 + '0');
 }
@@ -17,12 +17,12 @@ int	ft_atoi(char *s)
 	int	r;
 
 	r = 0;
-	while(*s >= '0' && *s <= '9')
+	while (*s >= '0' && *s <= '9')
 		r = r * 10 + *s++ - '0';
-	return(r);
+	return (r);
 }
 
-int is_prime(int n)
+int	is_prime(int n)
 {
 	int i = 2;
 
